@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateHeader() {
         if (window.scrollY > 50) {
             // Scrolled State - Gold background, smaller padding
-            header.classList.remove('bg-transparent', 'py-6', 'md:py-8');
-            header.classList.add('bg-brand-gold', 'shadow-md', 'py-4', 'md:py-5');
+            header.classList.remove('bg-transparent', 'py-4', 'md:py-6');
+            header.classList.add('bg-brand-gold', 'shadow-md', 'py-2', 'md:py-3');
 
             // Logo -> White (keep same size)
             if (headerLogo.src.indexOf('logo-white') === -1) {
@@ -39,8 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         } else {
             // Initial State - Transparent, normal padding
-            header.classList.add('bg-transparent', 'py-6', 'md:py-8');
-            header.classList.remove('bg-brand-gold', 'shadow-md', 'py-4', 'md:py-5');
+            header.classList.add('bg-transparent', 'py-4', 'md:py-6');
+            header.classList.remove('bg-brand-gold', 'shadow-md', 'py-2', 'md:py-3');
 
             // Logo -> Dark (keep same size)
             if (headerLogo.src.indexOf('logo.png') === -1) {
