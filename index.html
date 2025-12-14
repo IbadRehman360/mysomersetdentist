@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maison BE Dental Studio</title>
+    <link href="./css/output.css" rel="stylesheet">
+    <script defer src="./js/script.js"></script>
+    <style>
+        /* Custom scrollbar to match luxury feel if needed */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #d4af37;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b5952f;
+        }
+    </style>
+</head>
+
+<body class="bg-brand-cream text-brand-dark font-haute antialiased selection:bg-brand-accent selection:text-white overflow-x-hidden">
+
+    <!-- Sidebar Overlay -->
+    <div id="sidebar-overlay"
+        class="fixed inset-0 bg-black/60 z-[60] hidden opacity-0 transition-opacity duration-500 backdrop-blur-sm">
+    </div>
+
+    <!-- Sidebar -->
+    <aside id="sidebar"
+        class="fixed top-0 right-0 h-full w-full md:w-[400px] bg-brand-gold text-white z-[70] transform translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.77,0,0.175,1)] flex flex-col shadow-2xl overflow-hidden">
+
+        <!-- Close Button -->
+        <button id="close-sidebar" class="absolute top-6 left-6 text-white hover:text-white/70 transition-colors z-10">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+
+        <!-- Main Menu Panel -->
+        <div id="main-menu" class="absolute inset-0 flex flex-col justify-center px-12 py-20 transition-transform duration-300 translate-x-0">
+            <nav class="flex flex-col space-y-5 text-lg font-sans">
+                <a href="#" class="hover:text-white/70 transition-colors">Home</a>
+                <button class="flex items-center justify-between hover:text-white/70 transition-colors text-left submenu-trigger" data-submenu="doctors-menu">
+                    <span>Doctors</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+                <button class="flex items-center justify-between hover:text-white/70 transition-colors text-left submenu-trigger" data-submenu="about-menu">
+                    <span>About</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+                <button class="flex items-center justify-between hover:text-white/70 transition-colors text-left submenu-trigger" data-submenu="services-menu">
+                    <span>Services</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+                <a href="#" class="hover:text-white/70 transition-colors">Before and After</a>
+                <a href="#" class="hover:text-white/70 transition-colors">Blog</a>
+                <a href="#" class="hover:text-white/70 transition-colors">Virtual Consults</a>
+                <a href="#" class="hover:text-white/70 transition-colors">Membership</a>
+                <button class="flex items-center justify-between hover:text-white/70 transition-colors text-left submenu-trigger" data-submenu="reviews-menu">
+                    <span>Reviews</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+                <a href="#" class="hover:text-white/70 transition-colors">Contact</a>
+            </nav>
+        </div>
+
+        <!-- Doctors Submenu -->
+        <div id="doctors-menu" class="submenu absolute inset-0 flex flex-col justify-center px-12 py-20 transition-transform duration-300 translate-x-full">
+            <button class="back-btn flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-8 text-sm">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                Back
+            </button>
+            <h3 class="text-2xl font-light mb-6">Doctors</h3>
+            <nav class="flex flex-col space-y-4 text-lg font-sans">
+                <a href="#" class="hover:text-white/70 transition-colors">Meet Dr. Raj Sinha</a>
+                <a href="#" class="hover:text-white/70 transition-colors">Meet Dr. Joanna Sinha</a>
+                <a href="#" class="hover:text-white/70 transition-colors">Our Team</a>
+            </nav>
+        </div>
+
+        <!-- About Submenu -->
+        <div id="about-menu" class="submenu absolute inset-0 flex flex-col justify-center px-12 py-20 transition-transform duration-300 translate-x-full">
+            <button class="back-btn flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-8 text-sm">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                Back
+            </button>
+            <h3 class="text-2xl font-light mb-6">About</h3>
+            <nav class="flex flex-col space-y-4 text-lg font-sans">
+                <a href="#" class="hover:text-white/70 transition-colors">Our Practice</a>
+                <a href="#" class="hover:text-white/70 transition-colors">Technology</a>
+                <a href="#" class="hover:text-white/70 transition-colors">Office Tour</a>
+            </nav>
+        </div>
+
+        <!-- Services Submenu -->
+        <div id="services-menu" class="submenu absolute inset-0 flex flex-col justify-center px-12 py-20 transition-transform duration-300 translate-x-full">
+            <button class="back-btn flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-8 text-sm">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                Back
+            </button>
+            <h3 class="text-2xl font-light mb-6">Services</h3>
+            <nav class="flex flex-col space-y-4 text-lg font-sans">
+                <a href="#" class="hover:text-white/70 transition-colors">General Dentistry</a>
+                <a href="#" class="hover:text-white/70 transition-colors">Cosmetic Dentistry</a>
+                <a href="#" class="hover:text-white/70 transition-colors">Restorative Dentistry</a>
+                <a href="#" class="hover:text-white/70 transition-colors">Invisalign</a>
+                <a href="#" class="hover:text-white/70 transition-colors">Dental Implants</a>
+            </nav>
+        </div>
+
+        <!-- Reviews Submenu -->
+        <div id="reviews-menu" class="submenu absolute inset-0 flex flex-col justify-center px-12 py-20 transition-transform duration-300 translate-x-full">
+            <button class="back-btn flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-8 text-sm">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                Back
+            </button>
+            <h3 class="text-2xl font-light mb-6">Reviews</h3>
+            <nav class="flex flex-col space-y-4 text-lg font-sans">
+                <a href="#" class="hover:text-white/70 transition-colors">Google Reviews</a>
+                <a href="#" class="hover:text-white/70 transition-colors">Patient Testimonials</a>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- Main Content Wrapper -->
+    <div id="main-content" class="transition-transform duration-500 ease-[cubic-bezier(0.77,0,0.175,1)]">
+
+    <!-- Header -->
+    <header id="main-header"
+        class="absolute top-1 w-full z-50 transition-all duration-300 px-6 py-6 md:px-12 md:py-8 flex justify-between items-center bg-transparent">
+        <div class="logo z-50">
+            <a href="#">
+                <img src="./images/logo.png" alt="Maison BE"
+                    class="h-24 object-contain transition-all duration-300" id="header-logo">
+            </a>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="flex items-center gap-4 font-thin md:gap-6 z-50 -translate-y-[12px] -translate-x-[16px]" id="header-actions">
+            <a href="tel:+12125183815"
+                class="hidden md:flex items-center font-sans justify-center px-10 py-3 rounded-full border border-white bg-brand-light text-white hover:text-brand-gold hover:bg-transparent transition-all duration-300 text-sm font-normal tracking-wide"
+                id="btn-call">
+                Call Now
+            </a>
+
+            <!-- Mobile Menu Btn -->
+            <button id="menu-btn" class="group flex flex-col justify-center gap-1.5 w-10 h-8 cursor-pointer">
+                <span class="block w-full h-0.5 bg-brand-gold transition-colors duration-300" id="menu-line-1"></span>
+                <span class="block w-full h-0.5 bg-brand-gold transition-colors duration-300" id="menu-line-2"></span>
+                <span class="block w-full h-0.5 bg-brand-gold transition-colors duration-300" id="menu-line-3"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+        class="relative h-screen min-h-[600px] w-full overflow-hidden flex items-center justify-center bg-brand-cream">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <!-- Use the hero section banner provided by user -->
+            <img src="./images/hero%20section%20banner.png" alt="Hero Banner" class="w-full h-full object-cover">
+        </div>
+
+        <!-- Hero Content -->
+        <div
+            class="relative z-10 mt-4 text-center px-4 transform translate-y-0 transition-transform duration-1000 animate-fade-in-up w-full max-w-4xl mx-auto flex flex-col items-center">
+            <img src="./images/h1-banner.png" alt="Hero Banner" class="w-full h-full object-cover">
+
+      
+            <a href="#"
+                class=" mt-4 md:flex items-center font-sans justify-center px-6 py-4 uppercase rounded-full border border-white bg-brand-light text-white hover:text-brand-gold hover:bg-transparent transition-all duration-300 text-sm font-normal tracking-wide"
+                >Schedule Appointment
+            </a>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white/50 animate-bounce">
+            <svg class="w-8 h-8 font-thin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 14l-7 7m0 0l-7-7m7 7V3">
+                </path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Section 2: Welcome -->
+    <section class="relative overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="./images/bg-section%202.png" alt="Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/20"></div>
+        </div>
+
+        <!-- Content Container -->
+        <div class="relative z-10 mx-auto px-6 md:px-12 py-16 md:pt-24 md:pb-0">
+
+            <!-- Mobile Layout: Text, Logo, Badges -->
+            <div class="md:hidden text-center text-white">
+                <!-- Welcome Script -->
+                <p class="text-3xl font-normal mb-2">Welcome To</p>
+
+                <!-- Main Heading -->
+                <h2 class="font-sans text-4xl font-semibold tracking-wide mb-8 uppercase">
+                    Somerset Smiles
+                </h2>
+
+                <!-- Description -->
+                <p class="text-sm leading-relaxed font-sans mb-6 px-4 font-bolder">
+                    Your smile is one of the first things people notice. If you want a beautiful healthy smile and exceptional dental health, visit the practice of Dr. Raj Sinha, D.M.D, D.D.S & Joanna Hryrnoc-Sinha, D.M.D. Dr. Raj Sinha & Dr. Joanna Hryrnoc-Sinha, along with their caring team, strive to provide patients with the highest quality, most comfortable dental care in a relaxing, state-of-the-art environment.
+                </p>
+
+                <p class="text-sm leading-relaxed font-sans mb-6 px-4">
+                    Your smile says a lot about you. It reveals your sense of humor, shows affection, radiates confidence and brightens your entire face. But if you're hiding your smile because it's not as attractive or healthy as it should be, you're sending a negative message to everyone you meet.
+                </p>
+
+                <p class="text-sm leading-relaxed font-sans mb-12 px-4">
+                    Fortunately, Dr. Raj Sinha & Dr. Joanna Hryrnoc-Sinha can give you the beautiful, healthy smile and pleasant white gleaming pearlies and cosmetic dentistry expertise you deserve. Their expertise and skill can give you a smile that will not only match your confidence, it will reveal the very best things about you.
+                </p>
+
+                <!-- Logo -->
+                <img src="./images/logo-white.png" alt="Somerset Smiles" class="h-40 object-contain mx-auto mb-8">
+
+                <!-- Script Tagline -->
+                <p class="text-4xl font-light mb-2">
+                    Provide Excellent
+                </p>
+                <p class="text-4xl font-light mb-12">
+                    Dental Care!
+                </p>
+
+                <!-- Badges -->
+                <div class="flex flex-wrap justify-center gap-4 md:mb-16">
+                    <img
+                        src="./images/jersey-choice-dentist-logo-2024.webp"
+                        alt="Jersey Choice Dentist Award 2024"
+                        class="w-16 h-16 rounded-full shadow-lg object-cover"
+                        loading="lazy"
+                    >
+                    <img
+                        src="./images/jersey-choice-dentist-logo-2019.webp"
+                        alt="Jersey Choice Dentist Award 2019"
+                        class="w-16 h-16 rounded-full shadow-lg object-cover"
+                        loading="lazy"
+                    >
+                    <img
+                        src="./images/patients-choice-png.webp"
+                        alt="Patients' Choice Award from Vitals"
+                        class="w-16 h-16 rounded-full shadow-lg object-cover"
+                        loading="lazy"
+                    >
+                    <img
+                        src="./images/top-dentist-2017-png.webp"
+                        alt="Top Dentist Award 2017"
+                        class="w-16 h-16 rounded-full shadow-lg object-cover"
+                        loading="lazy"
+                    >
+                    <img
+                        src="./images/patients-choice-png%20(1).webp"
+                        alt="Patients' Choice Award from Vitals - Second Recognition"
+                        class="w-16 h-16 rounded-full shadow-lg object-cover"
+                        loading="lazy"
+                    >
+                </div>
+            </div>
+
+            <!-- Desktop Layout: Arch Card + Logo/Tagline/Badges -->
+            <div class="hidden md:grid md:grid-cols-2 gap-6 items-stretch">
+
+                <!-- Left: Arch Card -->
+                <div class="flex justify-center items-stretch" data-animate="slide-up">
+                    <div class="bg-brand-cream/95 backdrop-blur-sm rounded-t-[300px] p-16 pb-24 max-w-lg text-center shadow-2xl h-full flex flex-col justify-start">
+                        <!-- Welcome Script -->
+                        <p class="text-black text-3xl font-normal mb-2">Welcome</p>
+
+                        <!-- Main Heading -->
+                        <h2 class="font-sans text-4xl text-black font-semibold tracking-wide mb-8">
+                            Somerset Smiles
+                        </h2>
+
+                        <!-- Description -->
+                        <p class="text-gray-700 text-sm leading-relaxed font-sans mb-5">
+                            Your smile is one of the first things people notice. If you want a beautiful healthy smile and exceptional dental health, visit the practice of Dr. Raj Sinha, D.M.D, D.D.S & Joanna Hryrnoc-Sinha, D.M.D. Dr. Raj Sinha & Dr. Joanna Hryrnoc-Sinha, along with their caring team, strive to provide patients with the highest quality, most comfortable dental care in a relaxing, state-of-the-art environment.
+                        </p>
+
+                        <p class="text-gray-700 text-sm leading-relaxed font-sans mb-5">
+                            Your smile says a lot about you. It reveals your sense of humor, shows affection, radiates confidence and brightens your entire face. But if you're hiding your smile because it's not as attractive or healthy as it should be, you're sending a negative message to everyone you meet.
+                        </p>
+
+                        <p class="text-gray-700 text-sm leading-relaxed font-sans">
+                            Fortunately, Dr. Raj Sinha & Dr. Joanna Hryrnoc-Sinha can give you the beautiful, healthy smile and pleasant white gleaming pearlies and cosmetic dentistry expertise you deserve. Their expertise and skill can give you a smile that will not only match your confidence, it will reveal the very best things about you.
+                        </p>
+                    </div>
+                </div>
+                <!-- Right: Logo & Tagline -->
+                <div class="flex flex-col items-center justify-start text-center" data-animate="fade-in">
+                    <!-- Tree/Dental Logo -->
+                    <img src="./images/logo-white.png" alt="Somerset Smiles" class="h-54 mt-20 object-contain mb-8">
+
+                    <!-- Script Tagline -->
+                    <p class="text-white text-5xl font-light">
+                        Provide Excellent
+                    </p>
+                    <p class="text-white mt-2 text-5xl font-light">
+                        Dental Care!
+                    </p>
+
+                    <!-- Badges -->
+                    <div class="flex flex-wrap justify-center gap-6 mt-14">
+                        <img
+                            src="./images/jersey-choice-dentist-logo-2024.webp"
+                            alt="Jersey Choice Dentist Award 2024"
+                            class="w-24 h-24 rounded-full shadow-lg object-cover"
+                            loading="lazy"
+                        >
+                        <img
+                            src="./images/jersey-choice-dentist-logo-2019.webp"
+                            alt="Jersey Choice Dentist Award 2019"
+                            class="w-24 h-24 rounded-full shadow-lg object-cover"
+                            loading="lazy"
+                        >
+                        <img
+                            src="./images/patients-choice-png.webp"
+                            alt="Patients' Choice Award from Vitals"
+                            class="w-24 h-24 rounded-full shadow-lg object-cover"
+                            loading="lazy"
+                        >
+                        <img
+                            src="./images/top-dentist-2017-png.webp"
+                            alt="Top Dentist Award 2017"
+                            class="w-24 h-24 rounded-full shadow-lg object-cover"
+                            loading="lazy"
+                        >
+                        <img
+                            src="./images/patients-choice-png%20(1).webp"
+                            alt="Patients' Choice Award from Vitals - Second Recognition"
+                            class="w-24 h-24 rounded-full shadow-lg object-cover"
+                            loading="lazy"
+                        >
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Services Grid -->
+    <section class="py-16 md:py-24  gap-10 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+
+                <!-- Service Card 1: General Dentistry -->
+                <div class="group relative h-[400px] md:h-[500px] overflow-hidden cursor-pointer">
+                    <!-- Image -->
+                    <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=600&h=800&fit=crop"
+                        alt="General Dentistry"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+
+                    <!-- Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/80 transition-all duration-500"></div>
+
+                    <!-- Content -->
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
+                        <!-- Title - Always visible -->
+                        <h3 class="text-white text-xl md:text-2xl font-light tracking-wide uppercase mb-2 transform group-hover:-translate-y-2 transition-transform duration-500">
+                            General Dentistry
+                        </h3>
+
+                        <!-- Description - Shows on hover -->
+                        <p class="text-white/90 text-sm md:text-base font-sans leading-relaxed max-h-0 overflow-hidden opacity-0 group-hover:max-h-40 group-hover:opacity-100 transition-all duration-500">
+                            From routine cleanings to comprehensive exams, we provide preventive care to keep your smile healthy and beautiful for years to come.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service Card 2: Cosmetic Dentistry -->
+                <div class="group relative h-[400px] md:h-[500px] overflow-hidden cursor-pointer">
+                    <!-- Image -->
+                    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&h=800&fit=crop"
+                        alt="Cosmetic Dentistry"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+
+                    <!-- Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/80 transition-all duration-500"></div>
+
+                    <!-- Content -->
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
+                        <!-- Title - Always visible -->
+                        <h3 class="text-white text-xl md:text-2xl font-light tracking-wide uppercase mb-2 transform group-hover:-translate-y-2 transition-transform duration-500">
+                            Cosmetic Dentistry
+                        </h3>
+
+                        <!-- Description - Shows on hover -->
+                        <p class="text-white/90 text-sm md:text-base font-sans leading-relaxed max-h-0 overflow-hidden opacity-0 group-hover:max-h-40 group-hover:opacity-100 transition-all duration-500">
+                            Transform your smile with veneers, whitening, and other cosmetic treatments designed to give you the confidence you deserve.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service Card 3: Restorative Dentistry -->
+                <div class="group relative h-[400px] md:h-[500px] overflow-hidden cursor-pointer">
+                    <!-- Image -->
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&h=800&fit=crop"
+                        alt="Restorative Dentistry"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+
+                    <!-- Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/80 transition-all duration-500"></div>
+
+                    <!-- Content -->
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
+                        <!-- Title - Always visible -->
+                        <h3 class="text-white text-xl md:text-2xl font-light tracking-wide uppercase mb-2 transform group-hover:-translate-y-2 transition-transform duration-500">
+                            Restorative Dentistry
+                        </h3>
+
+                        <!-- Description - Shows on hover -->
+                        <p class="text-white/90 text-sm md:text-base font-sans leading-relaxed max-h-0 overflow-hidden opacity-0 group-hover:max-h-40 group-hover:opacity-100 transition-all duration-500">
+                            Whether you need full-mouth rehabilitation or a single crown, we use high-quality materials to improve the health and function of your teeth.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container mx-auto px-4 mt-4 md:px-8">
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+
+                <!-- Service Card 1: General Dentistry -->
+                <div class="group relative h-[400px] md:h-[500px] overflow-hidden cursor-pointer">
+                    <!-- Image -->
+                    <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=600&h=800&fit=crop"
+                        alt="General Dentistry"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+
+                    <!-- Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/80 transition-all duration-500"></div>
+
+                    <!-- Content -->
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
+                        <!-- Title - Always visible -->
+                        <h3 class="text-white text-xl md:text-2xl font-light tracking-wide uppercase mb-2 transform group-hover:-translate-y-2 transition-transform duration-500">
+                            General Dentistry
+                        </h3>
+
+                        <!-- Description - Shows on hover -->
+                        <p class="text-white/90 text-sm md:text-base font-sans leading-relaxed max-h-0 overflow-hidden opacity-0 group-hover:max-h-40 group-hover:opacity-100 transition-all duration-500">
+                            From routine cleanings to comprehensive exams, we provide preventive care to keep your smile healthy and beautiful for years to come.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service Card 2: Cosmetic Dentistry -->
+                <div class="group relative h-[400px] md:h-[500px] overflow-hidden cursor-pointer">
+                    <!-- Image -->
+                    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&h=800&fit=crop"
+                        alt="Cosmetic Dentistry"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+
+                    <!-- Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/80 transition-all duration-500"></div>
+
+                    <!-- Content -->
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
+                        <!-- Title - Always visible -->
+                        <h3 class="text-white text-xl md:text-2xl font-light tracking-wide uppercase mb-2 transform group-hover:-translate-y-2 transition-transform duration-500">
+                            Cosmetic Dentistry
+                        </h3>
+
+                        <!-- Description - Shows on hover -->
+                        <p class="text-white/90 text-sm md:text-base font-sans leading-relaxed max-h-0 overflow-hidden opacity-0 group-hover:max-h-40 group-hover:opacity-100 transition-all duration-500">
+                            Transform your smile with veneers, whitening, and other cosmetic treatments designed to give you the confidence you deserve.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service Card 3: Restorative Dentistry -->
+                <div class="group relative h-[400px] md:h-[500px] overflow-hidden cursor-pointer">
+                    <!-- Image -->
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&h=800&fit=crop"
+                        alt="Restorative Dentistry"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+
+                    <!-- Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/80 transition-all duration-500"></div>
+
+                    <!-- Content -->
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
+                        <!-- Title - Always visible -->
+                        <h3 class="text-white text-xl md:text-2xl font-light tracking-wide uppercase mb-2 transform group-hover:-translate-y-2 transition-transform duration-500">
+                            Restorative Dentistry
+                        </h3>
+
+                        <!-- Description - Shows on hover -->
+                        <p class="text-white/90 text-sm md:text-base font-sans leading-relaxed max-h-0 overflow-hidden opacity-0 group-hover:max-h-40 group-hover:opacity-100 transition-all duration-500">
+                            Whether you need full-mouth rehabilitation or a single crown, we use high-quality materials to improve the health and function of your teeth.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Preview -->
+    <footer class="bg-brand-dark text-white py-12 text-center">
+        <img src="./images/logo-white.png" alt="Logo" class="h-8 mx-auto mb-8 opacity-50">
+        <p class="text-xs tracking-widest text-gray-500 font-sans">&copy; 2024 MAISON BE DENTAL STUDIO. ALL RIGHTS
+            RESERVED.</p>
+    </footer>
+
+    </div> <!-- Close main-content wrapper -->
+
+</body>
+
+</html>
