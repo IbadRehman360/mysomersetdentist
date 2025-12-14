@@ -1,39 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.getElementById('main-header');
     const headerLogo = document.getElementById('header-logo');
-    const headerActions = document.getElementById('header-actions');
     const menuBtn = document.getElementById('menu-btn');
     const sidebar = document.getElementById('sidebar');
     const overlay = document.getElementById('sidebar-overlay');
     const closeSidebarBtn = document.getElementById('close-sidebar');
-    const btnCall = document.getElementById('btn-call');
-    const btnSchedule = document.getElementById('btn-schedule');
     const menuLines = document.querySelectorAll('#menu-btn span');
+    const btnCall = document.getElementById('btn-call');
 
     const logoWhite = './images/logo-white.png';
     const logoDark = './images/logo.png';
 
     // Header Scroll Effect
-    window.addEventListener('scroll', () => {
+    let ticking = false;
+
+    function updateHeader() {
         if (window.scrollY > 50) {
-            // Scrolled State - Gold background, fixed to top
-            header.classList.remove('bg-transparent', 'py-6', 'md:py-8', 'absolute', 'top-1');
-            header.classList.add('bg-brand-gold', 'shadow-md', 'py-2', 'md:py-4', 'fixed', 'top-0');
+            // Scrolled State - Gold background, smaller padding
+            header.classList.remove('bg-transparent', 'py-6', 'md:py-8');
+            header.classList.add('bg-brand-gold', 'shadow-md', 'py-4', 'md:py-5');
 
-            // Logo -> White and smaller
-            headerLogo.src = logoWhite;
-            headerLogo.classList.remove('h-24');
-            headerLogo.classList.add('h-16');
-
-            // Remove button transforms (center buttons)
-            if (headerActions) {
-                headerActions.classList.remove('-translate-y-[12px]', '-translate-x-[16px]');
-            }
-
-            // Buttons -> White with gold text
-            if (btnCall) {
-                btnCall.classList.remove('bg-brand-gold', 'text-white', 'border-brand-gold');
-                btnCall.classList.add('bg-white', 'text-brand-gold', 'border-white');
+            // Logo -> White (keep same size)
+            if (headerLogo.src.indexOf('logo-white') === -1) {
+                headerLogo.src = logoWhite;
             }
 
             // Menu Lines -> White
@@ -42,25 +31,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 line.classList.add('bg-white');
             });
 
-        } else {
-            // Initial State - Transparent, absolute with space from top
-            header.classList.add('bg-transparent', 'py-6', 'md:py-8', 'absolute', 'top-1');
-            header.classList.remove('bg-brand-gold', 'shadow-md', 'py-2', 'py-4', 'md:py-4', 'fixed', 'top-0');
-
-            // Logo -> Dark and larger
-            headerLogo.src = logoDark;
-            headerLogo.classList.add('h-24');
-            headerLogo.classList.remove('h-16');
-
-            // Restore button transforms (offset buttons)
-            if (headerActions) {
-                headerActions.classList.add('-translate-y-[12px]', '-translate-x-[16px]');
+            // Button -> White bg, gold text/border
+            if (btnCall) {
+                btnCall.classList.remove('bg-brand-light', 'border-white', 'text-white');
+                btnCall.classList.add('bg-white', 'text-brand-gold', 'border-brand-gold', 'scrolled-btn');
             }
 
-            // Buttons -> Gold with white text
-            if (btnCall) {
-                btnCall.classList.add('bg-brand-gold', 'text-white', 'border-brand-gold');
-                btnCall.classList.remove('bg-white', 'text-brand-gold', 'border-white');
+        } else {
+            // Initial State - Transparent, normal padding
+            header.classList.add('bg-transparent', 'py-6', 'md:py-8');
+            header.classList.remove('bg-brand-gold', 'shadow-md', 'py-4', 'md:py-5');
+
+            // Logo -> Dark (keep same size)
+            if (headerLogo.src.indexOf('logo.png') === -1) {
+                headerLogo.src = logoDark;
             }
 
             // Menu Lines -> Gold
@@ -68,6 +52,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 line.classList.add('bg-brand-gold');
                 line.classList.remove('bg-white');
             });
+
+            // Button -> Original style
+            if (btnCall) {
+                btnCall.classList.add('bg-brand-light', 'border-white', 'text-white');
+                btnCall.classList.remove('bg-white', 'text-brand-gold', 'border-brand-gold', 'scrolled-btn');
+            }
+        }
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateHeader);
+            ticking = true;
         }
     });
 

@@ -24,6 +24,12 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #b5952f;
         }
+
+        /* Scrolled button hover state */
+        #btn-call.scrolled-btn:hover {
+            background-color: #aea18f !important;
+            color: white !important;
+        }
     </style>
 </head>
 
@@ -152,16 +158,16 @@
 
     <!-- Header -->
     <header id="main-header"
-        class="absolute top-1 w-full z-50 transition-all duration-300 px-6 py-6 md:px-12 md:py-8 flex justify-between items-center bg-transparent">
+        class="fixed top-0 w-full z-50 transition-all duration-500 ease-out px-6 py-6 md:px-12 md:py-8 flex justify-between items-center bg-transparent">
         <div class="logo z-50">
             <a href="#">
                 <img src="./images/logo.png" alt="Maison BE"
-                    class="h-24 object-contain transition-all duration-300" id="header-logo">
+                    class="h-24 object-contain transition-all duration-500 ease-out" id="header-logo">
             </a>
         </div>
 
         <!-- Right Actions -->
-        <div class="flex items-center gap-4 font-thin md:gap-6 z-50 -translate-y-[12px] -translate-x-[16px]" id="header-actions">
+        <div class="flex items-center gap-4 font-thin md:gap-6 z-50" id="header-actions">
             <a href="tel:+12125183815"
                 class="hidden md:flex items-center font-sans justify-center px-10 py-3 rounded-full border border-white bg-brand-light text-white hover:text-brand-gold hover:bg-transparent transition-all duration-300 text-sm font-normal tracking-wide"
                 id="btn-call">
@@ -208,18 +214,18 @@
     </section>
 
     <!-- Section 2: Welcome -->
-    <section class="relative overflow-hidden">
+    <section class="relative overflow-hidden bg-white min-h-[600px] md:min-h-[800px] lg:min-h-[960px]">
         <!-- Background Image -->
-        <div class="absolute inset-0 z-0">
+        <div class="absolute z-0 top-0 bottom-0 left-4 right-4 md:left-10 md:right-10 lg:left-10 lg:right-10">
             <img src="./images/bg-section%202.png" alt="Background" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black/20"></div>
+            <div class="absolute inset-0 bg-white/20"></div>
         </div>
 
         <!-- Content Container -->
-        <div class="relative z-10 mx-auto px-6 md:px-12 py-16 md:pt-24 md:pb-0">
+        <div class="relative z-10 mx-auto px-4 md:px-8 lg:px-12 pt-12 pb-0 md:pt-16 lg:pt-24 h-[600px] md:h-[800px] lg:h-[960px]">
 
-            <!-- Mobile Layout: Text, Logo, Badges -->
-            <div class="md:hidden text-center text-white">
+            <!-- Mobile Layout: Text, Logo, Badges (shows below 1440px) -->
+            <div class="min-[1440px]:hidden text-center text-white">
                 <!-- Welcome Script -->
                 <p class="text-3xl font-normal mb-2">Welcome To</p>
 
@@ -287,77 +293,77 @@
                 </div>
             </div>
 
-            <!-- Desktop Layout: Arch Card + Logo/Tagline/Badges -->
-            <div class="hidden md:grid md:grid-cols-2 gap-6 items-stretch">
+            <!-- Desktop Layout: Arch Card + Logo/Tagline/Badges (shows at 1440px+) -->
+            <div class="hidden min-[1440px]:grid min-[1440px]:grid-cols-2 gap-0 items-end h-full">
 
                 <!-- Left: Arch Card -->
-                <div class="flex justify-center items-stretch" data-animate="slide-up">
-                    <div class="bg-brand-cream/95 backdrop-blur-sm rounded-t-[300px] p-16 pb-24 max-w-lg text-center shadow-2xl h-full flex flex-col justify-start">
+                <div class="flex justify-center items-end h-full pb-0 mb-0" data-animate="slide-up">
+                    <div class="bg-brand-cream/95 backdrop-blur-sm rounded-t-[150px] md:rounded-t-[200px] lg:rounded-t-[600px] p-8 md:p-10 lg:p-16 pb-8 md:pb-10 lg:pb-12 max-w-md md:max-w-lg lg:max-w-2xl text-center shadow-2xl flex flex-col justify-start mb-0 h-full">
                         <!-- Welcome Script -->
-                        <p class="text-black text-3xl font-normal mb-2">Welcome</p>
+                        <p class="text-black text-2xl md:text-3xl lg:text-4xl font-normal mb-2 mt-8 md:mt-12 lg:mt-16">Welcome To</p>
 
                         <!-- Main Heading -->
-                        <h2 class="font-sans text-4xl text-black font-semibold tracking-wide mb-8">
+                        <h2 class="font-sans text-black text-3xl md:text-4xl lg:text-5xl mt-1 font-semibold tracking-wide mb-4 md:mb-6 lg:mb-8">
                             Somerset Smiles
                         </h2>
 
                         <!-- Description -->
-                        <p class="text-gray-700 text-sm leading-relaxed font-sans mb-5">
+                        <p class="text-gray-700 text-xs md:text-sm lg:text-base leading-relaxed font-sans mb-3 md:mb-4 lg:mb-5">
                             Your smile is one of the first things people notice. If you want a beautiful healthy smile and exceptional dental health, visit the practice of Dr. Raj Sinha, D.M.D, D.D.S & Joanna Hryrnoc-Sinha, D.M.D. Dr. Raj Sinha & Dr. Joanna Hryrnoc-Sinha, along with their caring team, strive to provide patients with the highest quality, most comfortable dental care in a relaxing, state-of-the-art environment.
                         </p>
 
-                        <p class="text-gray-700 text-sm leading-relaxed font-sans mb-5">
+                        <p class="text-gray-700 text-xs md:text-sm lg:text-base leading-relaxed font-sans mb-3 md:mb-4 lg:mb-5">
                             Your smile says a lot about you. It reveals your sense of humor, shows affection, radiates confidence and brightens your entire face. But if you're hiding your smile because it's not as attractive or healthy as it should be, you're sending a negative message to everyone you meet.
                         </p>
 
-                        <p class="text-gray-700 text-sm leading-relaxed font-sans">
+                        <p class="text-gray-700 text-xs md:text-sm lg:text-base leading-relaxed font-sans">
                             Fortunately, Dr. Raj Sinha & Dr. Joanna Hryrnoc-Sinha can give you the beautiful, healthy smile and pleasant white gleaming pearlies and cosmetic dentistry expertise you deserve. Their expertise and skill can give you a smile that will not only match your confidence, it will reveal the very best things about you.
                         </p>
                     </div>
                 </div>
                 <!-- Right: Logo & Tagline -->
-                <div class="flex flex-col items-center justify-start text-center" data-animate="fade-in">
+                <div class="flex flex-col items-center justify-end mb-10 md:mb-16 lg:mb-20 text-center" data-animate="fade-in">
                     <!-- Tree/Dental Logo -->
-                    <img src="./images/logo-white.png" alt="Somerset Smiles" class="h-54 mt-20 object-contain mb-8">
+                    <img src="./images/logo-white.png" alt="Somerset Smiles" class="h-40 md:h-52 lg:h-64 mt-10 md:mt-16 lg:mt-20 object-contain mb-4 md:mb-6 lg:mb-8">
 
                     <!-- Script Tagline -->
-                    <p class="text-white text-5xl font-light">
+                    <p class="text-white text-3xl md:text-4xl lg:text-5xl mt-2 font-light">
                         Provide Excellent
                     </p>
-                    <p class="text-white mt-2 text-5xl font-light">
+                    <p class="text-white mt-2 mb-10 md:mb-16 lg:mb-20 text-3xl md:text-4xl lg:text-5xl font-light">
                         Dental Care!
                     </p>
 
                     <!-- Badges -->
-                    <div class="flex flex-wrap justify-center gap-6 mt-14">
+                    <div class="flex flex-wrap justify-center gap-3 md:gap-4 lg:gap-6 mt-8 md:mt-10 lg:mt-14">
                         <img
                             src="./images/jersey-choice-dentist-logo-2024.webp"
                             alt="Jersey Choice Dentist Award 2024"
-                            class="w-24 h-24 rounded-full shadow-lg object-cover"
+                            class="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full shadow-lg object-cover"
                             loading="lazy"
                         >
                         <img
                             src="./images/jersey-choice-dentist-logo-2019.webp"
                             alt="Jersey Choice Dentist Award 2019"
-                            class="w-24 h-24 rounded-full shadow-lg object-cover"
+                            class="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full shadow-lg object-cover"
                             loading="lazy"
                         >
                         <img
                             src="./images/patients-choice-png.webp"
                             alt="Patients' Choice Award from Vitals"
-                            class="w-24 h-24 rounded-full shadow-lg object-cover"
+                            class="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full shadow-lg object-cover"
                             loading="lazy"
                         >
                         <img
                             src="./images/top-dentist-2017-png.webp"
                             alt="Top Dentist Award 2017"
-                            class="w-24 h-24 rounded-full shadow-lg object-cover"
+                            class="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full shadow-lg object-cover"
                             loading="lazy"
                         >
                         <img
                             src="./images/patients-choice-png%20(1).webp"
                             alt="Patients' Choice Award from Vitals - Second Recognition"
-                            class="w-24 h-24 rounded-full shadow-lg object-cover"
+                            class="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full shadow-lg object-cover"
                             loading="lazy"
                         >
                     </div>
