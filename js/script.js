@@ -152,8 +152,29 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', resetToMainMenu);
     });
 
-    // Fade In Observer
-    const observer = new IntersectionObserver((entries) => {
+    // Enhanced Scroll Animation Observer
+    const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add visible class to trigger CSS transition
+                entry.target.classList.add('animate-visible');
+
+                // Stop observing once animated (one-time animation)
+                scrollObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px' // Trigger slightly before element is fully in view
+    });
+
+    // Observe all elements with scroll animation classes
+    document.querySelectorAll('.animate-on-scroll, .animate-slide-left, .animate-slide-right, .animate-scale').forEach(el => {
+        scrollObserver.observe(el);
+    });
+
+    // Legacy support for data-animate attribute
+    const legacyObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('opacity-100', 'translate-y-0');
@@ -164,7 +185,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('[data-animate]').forEach(el => {
         el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
-        observer.observe(el);
+        legacyObserver.observe(el);
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                e.preventDefault();
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
     });
 
     // Before/After Comparison Slider
