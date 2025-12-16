@@ -8,10 +8,10 @@ module.exports = {
       },
       colors: {
         'brand-dark': '#1a1a1a',
-        'brand-gold': '#9e8e78',
+        'brand-blue': '#1e293b',
         'brand-cream': '#fcfbf9',
         'brand-accent': '#d4af37',
-        'brand-light': '#aea18f',
+        'brand-light': '#c9a962',
         'brand-white': '#fcf9f2',
       },
       spacing: {

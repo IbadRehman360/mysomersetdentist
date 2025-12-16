@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.scrollY > 50) {
             // Scrolled State - Gold background, smaller padding
             header.classList.remove('bg-transparent', 'py-4', 'md:py-6');
-            header.classList.add('bg-brand-gold', 'shadow-md', 'py-2', 'md:py-3');
+            header.classList.add('bg-brand-blue', 'shadow-md', 'py-2', 'md:py-3');
 
             // Logo -> White (keep same size)
             if (headerLogo.src.indexOf('logo-white') === -1) {
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Menu Lines -> White
             menuLines.forEach(line => {
-                line.classList.remove('bg-brand-gold');
+                line.classList.remove('bg-brand-blue');
                 line.classList.add('bg-white');
             });
 
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             // Initial State - Transparent, normal padding
             header.classList.add('bg-transparent', 'py-4', 'md:py-6');
-            header.classList.remove('bg-brand-gold', 'shadow-md', 'py-2', 'md:py-3');
+            header.classList.remove('bg-brand-blue', 'shadow-md', 'py-2', 'md:py-3');
 
             // Logo -> Dark (keep same size)
             if (headerLogo.src.indexOf('logo.png') === -1) {
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Menu Lines -> Gold
             menuLines.forEach(line => {
-                line.classList.add('bg-brand-gold');
+                line.classList.add('bg-brand-blue');
                 line.classList.remove('bg-white');
             });
 
@@ -166,4 +166,64 @@ document.addEventListener('DOMContentLoaded', () => {
         el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
         observer.observe(el);
     });
+
+    // Before/After Comparison Slider
+    const slider = document.getElementById('comparison-slider');
+    const beforeContainer = document.getElementById('before-container');
+    const sliderHandle = document.getElementById('slider-handle');
+    const progressBar = document.getElementById('progress-bar');
+
+    if (slider && beforeContainer && sliderHandle) {
+        let isDragging = false;
+
+        function updateSliderPosition(x) {
+            const rect = slider.getBoundingClientRect();
+            let percentage = ((x - rect.left) / rect.width) * 100;
+            percentage = Math.max(0, Math.min(100, percentage));
+
+            beforeContainer.style.width = percentage + '%';
+            sliderHandle.style.left = percentage + '%';
+            if (progressBar) {
+                progressBar.style.width = percentage + '%';
+            }
+        }
+
+        // Mouse events
+        sliderHandle.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            e.preventDefault();
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (isDragging) {
+                updateSliderPosition(e.clientX);
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        // Touch events for mobile
+        sliderHandle.addEventListener('touchstart', (e) => {
+            isDragging = true;
+        });
+
+        document.addEventListener('touchmove', (e) => {
+            if (isDragging) {
+                updateSliderPosition(e.touches[0].clientX);
+            }
+        });
+
+        document.addEventListener('touchend', () => {
+            isDragging = false;
+        });
+
+        // Click on slider to move
+        slider.addEventListener('click', (e) => {
+            if (e.target !== sliderHandle && !sliderHandle.contains(e.target)) {
+                updateSliderPosition(e.clientX);
+            }
+        });
+    }
 });

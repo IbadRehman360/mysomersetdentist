@@ -42,7 +42,7 @@
 
     <!-- Sidebar -->
     <aside id="sidebar"
-        class="fixed top-0 right-0 h-full w-full md:w-[400px] bg-brand-gold text-white z-[70] transform translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.77,0,0.175,1)] flex flex-col shadow-2xl overflow-hidden">
+        class="fixed top-0 right-0 h-full w-full md:w-[400px] bg-brand-blue text-white z-[70] transform translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.77,0,0.175,1)] flex flex-col shadow-2xl overflow-hidden">
 
         <!-- Close Button -->
         <button id="close-sidebar" class="absolute top-6 left-6 text-white hover:text-white/70 transition-colors z-10">
@@ -146,16 +146,16 @@
         <!-- Right Actions -->
         <div class="flex items-center gap-4 font-thin md:gap-6 z-50" id="header-actions">
             <a href="tel:+12125183815"
-                class="hidden md:flex items-center font-sans justify-center px-10 py-3 rounded-full border border-white bg-brand-light text-white hover:text-brand-gold hover:bg-transparent transition-all duration-300 text-sm font-normal tracking-wide"
+                class="hidden md:flex items-center font-sans justify-center px-10 py-3 rounded-full bg-brand-light text-white hover:text-brand-gold hover:bg-transparent transition-all duration-300 text-sm font-semibold  tracking-wide"
                 id="btn-call">
                 Call Now
             </a>
 
             <!-- Mobile Menu Btn -->
-            <button id="menu-btn" class="group flex flex-col justify-center gap-1.5 w-10 h-8 cursor-pointer">
-                <span class="block w-full h-1 bg-brand-gold rounded-full transition-colors duration-300" id="menu-line-1"></span>
-                <span class="block w-full h-1 bg-brand-gold rounded-full transition-colors duration-300" id="menu-line-2"></span>
-                <span class="block w-full h-1 bg-brand-gold rounded-full transition-colors duration-300" id="menu-line-3"></span>
+            <button id="menu-btn" class="group flex flex-col justify-center gap-1.5 w-8 h-8 cursor-pointer">
+                <span class="block w-full h-1 bg-white rounded-full transition-colors duration-300" id="menu-line-1"></span>
+                <span class="block w-full h-1 bg-white rounded-full transition-colors duration-300" id="menu-line-2"></span>
+                <span class="block w-full h-1 bg-white rounded-full transition-colors duration-300" id="menu-line-3"></span>
             </button>
         </div>
     </header>
@@ -165,7 +165,7 @@
 
     <!-- Hero Section -->
     <section
-        class="relative h-screen min-h-[600px] w-full overflow-hidden flex items-center justify-center bg-brand-cream">
+        class="relative h-screen min-h-[110vh] w-full overflow-hidden flex items-center justify-center bg-brand-cream">
         <!-- Background Image -->
         <div class="absolute inset-0 z-0">
             <!-- Use the hero section banner provided by user -->
@@ -179,7 +179,7 @@
 
       
             <a href="#"
-                class=" mt-4 md:flex items-center font-sans justify-center px-6 py-4 rounded-full border border-white bg-brand-light text-white hover:text-brand-gold hover:bg-transparent transition-all duration-300 text-sm font-normal tracking-wide"
+                class=" mt-4 md:flex items-center font-semibold font-sans justify-center px-6 py-4 rounded-full  bg-brand-light text-white hover:text-brand-gold hover:bg-transparent transition-all duration-300 text-sm tracking-wide"
                 >Schedule Appointment
             </a>
         </div>
@@ -194,15 +194,15 @@
     </section>
 
     <!-- Section 2: Welcome -->
-    <section class="relative overflow-hidden bg-transparent min-h-[600px] md:min-h-[800px] lg:min-h-[960px] -mt-[35px]">
+    <section class="relative overflow-hidden bg-transparent min-h-fit md:min-h-[800px] lg:min-h-[960px] -mt-[35px]">
         <!-- Background Image -->
         <div class="absolute z-0 top-0 bottom-0 left-4 right-4 md:left-10 md:right-10 lg:left-10 lg:right-10">
-            <img src="./images/bg-section%202.png" alt="Background" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-white/20"></div>
+            <img src="./images/bg-section.png" alt="Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-white/0"></div>
         </div>
 
         <!-- Content Container -->
-        <div class="relative z-10 mx-auto px-4 md:px-8 lg:px-12 pt-12 pb-0 md:pt-16 lg:pt-20 h-[600px] md:h-[800px] lg:h-[960px]">
+        <div class="relative z-10 mx-auto px-4 md:px-8 lg:px-12 pt-12 md:pt-12  min-h-fit md:h-[800px] lg:h-[960px]">
 
             <!-- Mobile Layout: Text, Logo, Badges (shows below 1440px) -->
             <div class="min-[1440px]:hidden text-center text-white">
@@ -210,7 +210,7 @@
                 <p class="text-3xl font-normal mb-2">Welcome To</p>
 
                 <!-- Main Heading -->
-                <h2 class="font-sans  text-4xl font-semibold tracking-wide mb-8 uppercase">
+                <h2 class="font-sans text-brand-accent text-4xl font-semibold tracking-wide mb-8 uppercase">
                     Somerset Smiles
                 </h2>
 
@@ -242,31 +242,31 @@
                 <!-- Badges -->
                 <div class="flex flex-wrap justify-center gap-4 md:mb-16">
                     <img
-                        src="./images/jersey-choice-dentist-logo-2024.webp"
+                        src="./images/badges-images/jersey-choice-dentist-logo-2024.webp"
                         alt="Jersey Choice Dentist Award 2024"
                         class="w-16 h-16 rounded-full shadow-lg object-cover"
                         loading="lazy"
                     >
                     <img
-                        src="./images/jersey-choice-dentist-logo-2019.webp"
+                        src="./images/badges-images/jersey-choice-dentist-logo-2019.webp"
                         alt="Jersey Choice Dentist Award 2019"
                         class="w-16 h-16 rounded-full shadow-lg object-cover"
                         loading="lazy"
                     >
                     <img
-                        src="./images/patients-choice-png.webp"
+                        src="./images/badges-images/patients-choice-png.webp"
                         alt="Patients' Choice Award from Vitals"
                         class="w-16 h-16 rounded-full shadow-lg object-cover"
                         loading="lazy"
                     >
                     <img
-                        src="./images/top-dentist-2017-png.webp"
+                        src="./images/badges-images/top-dentist-2017-png.webp"
                         alt="Top Dentist Award 2017"
                         class="w-16 h-16 rounded-full shadow-lg object-cover"
                         loading="lazy"
                     >
                     <img
-                        src="./images/patients-choice-png%20(1).webp"
+                        src="./images/badges-images/patients-choice-png%20(1).webp"
                         alt="Patients' Choice Award from Vitals - Second Recognition"
                         class="w-16 h-16 rounded-full shadow-lg object-cover"
                         loading="lazy"
@@ -278,16 +278,17 @@
             <div class="hidden min-[1440px]:grid min-[1440px]:grid-cols-2 gap-0 items-end h-full">
 
                 <!-- Left: Arch Card -->
-                <div class="flex justify-center pl-10 items-end h-full pb-0 mb-0" data-animate="slide-up">
-                    <div class="bg-brand-white backdrop-blur-sm p-8 md:p-10 lg:p-10 pb-8 md:pb-10 lg:pb-12 max-w-md md:max-w-lg lg:max-w-3xl text-center shadow-2xl flex flex-col justify-start mb-0 h-full " style="border-radius: 50% 50% 0 0 / 50% 50% 0 0;">
+                <div class="flex justify-center  items-end h-full pb-0 mb-0" data-animate="slide-up">
+                    <div class="bg-brand-white backdrop-blur-sm p-8 md:p-10 lg:p-16  pb-8 md:pb-10 lg:pb-12 max-w-md md:max-w-lg lg:max-w-2xl text-center shadow-2xl flex flex-col justify-start mb-0 h-full " style="border-radius: 50% 50% 0 0 / 50% 50% 0 0;">
                         <!-- Welcome Script -->
-                        <p class="text-black text-2xl md:text-3xl lg:text-4xl font-normal mb-2 mt-8 md:mt-12 lg:mt-16">Welcome To</p>
+                        <p class="text-gray-700 tracking-widest text-2xl md:text-3xl lg:text-4xl font-normal mb-2 mt-8 md:mt-12 lg:mt-28">Welcome To</p>
 
                         <!-- Main Heading -->
-                        <h2 class="font-sans text-black text-3xl md:text-4xl lg:text-6xl mt-1 font-normal tracking-wide mb-4 md:mb-6 lg:mb-8">
+                        <h2 class="font-sans text-brand-light text-3xl md:text-4xl lg:text-6xl mt-1 font-normal tracking-wide mb-4 md:mb-6 lg:mb-8">
                             Somerset Smiles
                         </h2>
 
+                        
                         <!-- Description -->
                         <p class="text-gray-700 text-xs md:text-sm lg:text-base leading-relaxed font-sans mb-3 md:mb-4 lg:mb-5">
                             Your smile is one of the first things people notice. If you want a beautiful healthy smile and exceptional dental health, visit the practice of Dr. Raj Sinha, D.M.D, D.D.S & Joanna Hryrnoc-Sinha, D.M.D. Dr. Raj Sinha & Dr. Joanna Hryrnoc-Sinha, along with their caring team, strive to provide patients with the highest quality, most comfortable dental care in a relaxing, state-of-the-art environment.
@@ -302,54 +303,49 @@
                         </p>
                     </div>
                 </div>
-                <!-- Right: Logo & Tagline -->
-                <div class="flex flex-col items-center justify-between text-center h-full py-16" data-animate="fade-in">
-                    <!-- Tree/Dental Logo -->
-                    
-                    <!-- Script Tagline -->
-                    <div class="flex gap-14 flex-col items-center">
-                            <img src="./images/logo-white.png" alt="Somerset Smiles" class="h-40 md:h-52 lg:h-64 object-contain">
+                <div class="flex flex-col items-center text-center h-full  " data-animate="fade-in">
+                    <div class="flex gap-14 flex-col items-center mt-24">
+                            <img src="./images/logo-white.png" alt="Somerset Smiles" class="h-40 md:h-52 mt-20 lg:h-64 object-contain">
                        
                        <div>
-                           <p class="text-white text-3xl md:text-4xl lg:text-6xl 2xl:text-7xl font-light">
+                           <p class="text-white text-3xl md:text-4xl lg:text-6xl font-light">
                                Provide Excellent
                             </p>
-                            <p class="text-white mt-2 text-3xl md:text-4xl lg:text-5xl font-light">
+                            <p class="text-white mt-2 text-3xl md:text-4xl lg:text-6xl font-light">
                                 Dental Care!
                             </p>
                         </div>
                     </div>
 
-                    <!-- Badges -->
-                    <div class="flex flex-wrap justify-center gap-3 md:gap-4 lg:gap-6">
+                    <div class="flex flex-wrap justify-center gap-3 md:gap-4 mt-16 lg:ml-6">
                         <img
-                            src="./images/jersey-choice-dentist-logo-2024.webp"
+                            src="./images/badges-images/jersey-choice-dentist-logo-2024.webp"
                             alt="Jersey Choice Dentist Award 2024"
-                            class="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full shadow-lg object-cover"
+                            class="w-16 h-16 md:w-20 md:h-20 lg:w-28 lg:h-28 rounded-full shadow-lg object-cover"
                             loading="lazy"
                         >
                         <img
-                            src="./images/jersey-choice-dentist-logo-2019.webp"
+                            src="./images/badges-images/jersey-choice-dentist-logo-2019.webp"
                             alt="Jersey Choice Dentist Award 2019"
-                            class="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full shadow-lg object-cover"
+                            class="w-16 h-16 md:w-20 md:h-20 lg:w-28 lg:h-28 rounded-full shadow-lg object-cover"
                             loading="lazy"
                         >
                         <img
-                            src="./images/patients-choice-png.webp"
+                            src="./images/badges-images/patients-choice-png.webp"
                             alt="Patients' Choice Award from Vitals"
-                            class="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full shadow-lg object-cover"
+                            class="w-16 h-16 md:w-20 md:h-20 lg:w-28 lg:h-28 rounded-full shadow-lg object-cover"
                             loading="lazy"
                         >
                         <img
-                            src="./images/top-dentist-2017-png.webp"
+                            src="./images/badges-images/top-dentist-2017-png.webp"
                             alt="Top Dentist Award 2017"
-                            class="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full shadow-lg object-cover"
+                            class="w-16 h-16 md:w-20 md:h-20 lg:w-28 lg:h-28 rounded-full shadow-lg object-cover"
                             loading="lazy"
                         >
                         <img
-                            src="./images/patients-choice-png%20(1).webp"
+                            src="./images/badges-images/patients-choice-png%20(1).webp"
                             alt="Patients' Choice Award from Vitals - Second Recognition"
-                            class="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full shadow-lg object-cover"
+                            class="w-16 h-16 md:w-20 md:h-20 lg:w-28 lg:h-28 rounded-full shadow-lg object-cover"
                             loading="lazy"
                         >
                     </div>
@@ -360,78 +356,78 @@
     </section>
 
     <!-- Section 3: Services Grid -->
-    <section class="py-16 md:py-24  gap-10 bg-white">
+    <section class="py-16 md:py-24 gap-10 bg-white">
         <div class="container mx-auto px-4 md:px-8">
             <!-- Services Grid -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-1 md:gap-2">
 
                 <!-- Service Card 1: General Dentistry -->
-                <div class="group relative h-[475px] md:h-[575px] overflow-hidden cursor-pointer">
+                <div class="group relative h-[350px] sm:h-[400px] md:h-[575px] overflow-hidden cursor-pointer">
                     <!-- Image -->
-                    <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=600&h=800&fit=crop"
+                    <img src="./images/calllouts-images/callout1.png"
                         alt="General Dentistry"
                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
 
                     <!-- Overlay -->
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/80 transition-all duration-500"></div>
+                    <div class="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-500"></div>
 
-                    <!-- Content -->
-                    <div class="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
-                        <!-- Title - Always visible -->
-                        <h3 class="text-white text-xl md:text-2xl font-light tracking-wide mb-2 transform group-hover:-translate-y-2 transition-transform duration-500">
+                    <!-- Content - Centered, moves up on hover -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-6 md:p-8 text-center translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                        <!-- Title -->
+                        <h3 class="text-white text-xl md:text-2xl lg:text-3xl font-semibold tracking-widest uppercase mb-4">
                             General Dentistry
                         </h3>
 
                         <!-- Description - Shows on hover -->
-                        <p class="text-white/90 text-sm md:text-base font-sans leading-relaxed max-h-0 overflow-hidden opacity-0 group-hover:max-h-40 group-hover:opacity-100 transition-all duration-500">
-                            From routine cleanings to comprehensive exams, we provide preventive care to keep your smile healthy and beautiful for years to come.
+                        <p class="text-white/90 text-sm md:text-base font-sans leading-relaxed max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            Routine dental services, like teeth polishing and fluoride, will protect your teeth so you can maintain a healthy smile for years to come.
                         </p>
                     </div>
                 </div>
 
                 <!-- Service Card 2: Cosmetic Dentistry -->
-                <div class="group relative h-[475px] md:h-[575px] overflow-hidden cursor-pointer">
+                <div class="group relative h-[350px] sm:h-[400px] md:h-[575px] overflow-hidden cursor-pointer">
                     <!-- Image -->
-                    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&h=800&fit=crop"
+                    <img src="./images/calllouts-images/callout2.png"
                         alt="Cosmetic Dentistry"
                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
 
                     <!-- Overlay -->
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/80 transition-all duration-500"></div>
+                    <div class="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-500"></div>
 
-                    <!-- Content -->
-                    <div class="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
-                        <!-- Title - Always visible -->
-                        <h3 class="text-white text-xl md:text-2xl font-light tracking-wide mb-2 transform group-hover:-translate-y-2 transition-transform duration-500">
+                    <!-- Content - Centered, moves up on hover -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-6 md:p-8 text-center translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                        <!-- Title -->
+                        <h3 class="text-white text-xl md:text-2xl lg:text-3xl font-semibold tracking-widest uppercase mb-4">
                             Cosmetic Dentistry
                         </h3>
 
                         <!-- Description - Shows on hover -->
-                        <p class="text-white/90 text-sm md:text-base font-sans leading-relaxed max-h-0 overflow-hidden opacity-0 group-hover:max-h-40 group-hover:opacity-100 transition-all duration-500">
+                        <p class="text-white/90 text-sm md:text-base font-sans leading-relaxed max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                             Transform your smile with veneers, whitening, and other cosmetic treatments designed to give you the confidence you deserve.
                         </p>
                     </div>
                 </div>
 
                 <!-- Service Card 3: Restorative Dentistry -->
-                <div class="group relative h-[475px] md:h-[575px] overflow-hidden cursor-pointer">
+                <div class="group relative h-[350px] sm:h-[400px] md:h-[575px] overflow-hidden cursor-pointer">
                     <!-- Image -->
-                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&h=800&fit=crop"
+                    <img src="./images/calllouts-images/callout3.png"
                         alt="Restorative Dentistry"
                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
 
                     <!-- Overlay -->
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/80 transition-all duration-500"></div>
+                    <div class="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-500"></div>
 
-                    <!-- Content -->
-                    <div class="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
-                        <!-- Title - Always visible -->
-                        <h3 class="text-white text-xl md:text-2xl font-light tracking-wide mb-2 transform group-hover:-translate-y-2 transition-transform duration-500">
+                    <!-- Content - Centered, moves up on hover -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-6 md:p-8 text-center translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                        <!-- Title -->
+                        <h3 class="text-white text-xl md:text-2xl lg:text-3xl font-semibold tracking-widest uppercase mb-4">
                             Restorative Dentistry
                         </h3>
 
                         <!-- Description - Shows on hover -->
-                        <p class="text-white/90 text-sm md:text-base font-sans leading-relaxed max-h-0 overflow-hidden opacity-0 group-hover:max-h-40 group-hover:opacity-100 transition-all duration-500">
+                        <p class="text-white/90 text-sm md:text-base font-sans leading-relaxed max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                             Whether you need full-mouth rehabilitation or a single crown, we use high-quality materials to improve the health and function of your teeth.
                         </p>
                     </div>
@@ -440,90 +436,399 @@
             </div>
         </div>
         <div class="container mx-auto px-4 mt-4 md:px-8">
-            <!-- Services Grid -->
+            <!-- Services Grid Row 2 -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-1 md:gap-2">
 
-                <!-- Service Card 1: General Dentistry -->
-                <div class="group relative h-[475px] md:h-[575px] overflow-hidden cursor-pointer">
+                <!-- Service Card 4: Implant Dentistry -->
+                <div class="group relative h-[350px] sm:h-[400px] md:h-[575px] overflow-hidden cursor-pointer">
                     <!-- Image -->
-                    <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=600&h=800&fit=crop"
-                        alt="General Dentistry"
+                    <img src="./images/calllouts-images/callout4.png"
+                        alt="Implant Dentistry"
                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
 
                     <!-- Overlay -->
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/80 transition-all duration-500"></div>
+                    <div class="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-500"></div>
 
-                    <!-- Content -->
-                    <div class="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
-                        <!-- Title - Always visible -->
-                        <h3 class="text-white text-xl md:text-2xl font-light tracking-wide mb-2 transform group-hover:-translate-y-2 transition-transform duration-500">
-                            General Dentistry
+                    <!-- Content - Centered, moves up on hover -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-6 md:p-8 text-center translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                        <!-- Title -->
+                        <h3 class="text-white text-xl md:text-2xl lg:text-3xl font-semibold tracking-widest uppercase mb-4">
+                            Implant Dentistry
                         </h3>
 
                         <!-- Description - Shows on hover -->
-                        <p class="text-white/90 text-sm md:text-base font-sans leading-relaxed max-h-0 overflow-hidden opacity-0 group-hover:max-h-40 group-hover:opacity-100 transition-all duration-500">
-                            From routine cleanings to comprehensive exams, we provide preventive care to keep your smile healthy and beautiful for years to come.
+                        <p class="text-white/90 text-sm md:text-base font-sans leading-relaxed max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            Replace missing teeth with permanent, natural-looking dental implants that restore your smile and confidence.
                         </p>
                     </div>
                 </div>
 
-                <!-- Service Card 2: Cosmetic Dentistry -->
-                <div class="group relative h-[475px] md:h-[575px] overflow-hidden cursor-pointer">
+                <!-- Service Card 5: Orthodontics -->
+                <div class="group relative h-[350px] sm:h-[400px] md:h-[575px] overflow-hidden cursor-pointer">
                     <!-- Image -->
-                    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&h=800&fit=crop"
-                        alt="Cosmetic Dentistry"
+                    <img src="./images/calllouts-images/callout5.png"
+                        alt="Orthodontics"
                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
 
                     <!-- Overlay -->
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/80 transition-all duration-500"></div>
+                    <div class="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-500"></div>
 
-                    <!-- Content -->
-                    <div class="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
-                        <!-- Title - Always visible -->
-                        <h3 class="text-white text-xl md:text-2xl font-light tracking-wide mb-2 transform group-hover:-translate-y-2 transition-transform duration-500">
-                            Cosmetic Dentistry
+                    <!-- Content - Centered, moves up on hover -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-6 md:p-8 text-center translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                        <!-- Title -->
+                        <h3 class="text-white text-xl md:text-2xl lg:text-3xl font-semibold tracking-widest uppercase mb-4">
+                            Orthodontics
                         </h3>
 
                         <!-- Description - Shows on hover -->
-                        <p class="text-white/90 text-sm md:text-base font-sans leading-relaxed max-h-0 overflow-hidden opacity-0 group-hover:max-h-40 group-hover:opacity-100 transition-all duration-500">
-                            Transform your smile with veneers, whitening, and other cosmetic treatments designed to give you the confidence you deserve.
+                        <p class="text-white/90 text-sm md:text-base font-sans leading-relaxed max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            Achieve a straighter, more aligned smile with our modern orthodontic solutions including Invisalign and traditional braces.
                         </p>
                     </div>
                 </div>
 
-                <!-- Service Card 3: Restorative Dentistry -->
-                <div class="group relative h-[475px] md:h-[575px] overflow-hidden cursor-pointer">
+                <!-- Service Card 6: Emergency Care -->
+                <div class="group relative h-[350px] sm:h-[400px] md:h-[575px] overflow-hidden cursor-pointer">
                     <!-- Image -->
-                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&h=800&fit=crop"
-                        alt="Restorative Dentistry"
+                    <img src="./images/calllouts-images/callout6.png"
+                        alt="Emergency Care"
                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
 
                     <!-- Overlay -->
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/80 transition-all duration-500"></div>
+                    <div class="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-500"></div>
 
-                    <!-- Content -->
-                    <div class="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
-                        <!-- Title - Always visible -->
-                        <h3 class="text-white text-xl md:text-2xl font-light tracking-wide mb-2 transform group-hover:-translate-y-2 transition-transform duration-500">
-                            Restorative Dentistry
+                    <!-- Content - Centered, moves up on hover -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-6 md:p-8 text-center translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                        <!-- Title -->
+                        <h3 class="text-white text-xl md:text-2xl lg:text-3xl font-semibold tracking-widest uppercase mb-4">
+                            Emergency Care
                         </h3>
 
                         <!-- Description - Shows on hover -->
-                        <p class="text-white/90 text-sm md:text-base font-sans leading-relaxed max-h-0 overflow-hidden opacity-0 group-hover:max-h-40 group-hover:opacity-100 transition-all duration-500">
-                            Whether you need full-mouth rehabilitation or a single crown, we use high-quality materials to improve the health and function of your teeth.
+                        <p class="text-white/90 text-sm md:text-base font-sans leading-relaxed max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            When dental emergencies happen, we're here for you with prompt, compassionate care to relieve pain and restore your smile.
                         </p>
                     </div>
                 </div>
 
             </div>
         </div>
+
+        <!-- ALL SERVICES Button -->
+        <div class="text-center py-12">
+            <a href="#" class="inline-block bg-brand-light text-white py-3 px-10 rounded-full text-sm tracking-widest uppercase hover:bg-brand-dark transition-colors">
+                All Services
+            </a>
+        </div>
     </section>
 
-    <!-- Footer Preview -->
-    <footer class="bg-brand-dark text-white py-12 text-center">
-        <img src="./images/logo-white.png" alt="Logo" class="h-8 mx-auto mb-8 opacity-50">
-        <p class="text-xs tracking-widest text-gray-500 font-sans">&copy; 2024 MAISON BE DENTAL STUDIO. ALL RIGHTS
-            RESERVED.</p>
+    <!-- Section: Real Results -->
+    <section class="bg-white py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <!-- Header -->
+            <div class="text-center mb-10 md:mb-14">
+                <h2 class="font-haute text-4xl md:text-5xl text-brand-light mb-2">Real</h2>
+                <h3 class="text-3xl md:text-4xl lg:text-5xl tracking-widest text-brand-light uppercase">Results</h3>
+                <p class="text-gray-600 font-sans text-sm md:text-base max-w-3xl mx-auto mt-6 leading-relaxed">
+                    Many Somerset, NJ patients have achieved healthier, glowing smiles through cosmetic and restorative oral procedures. Take a look through our gallery to envision the outcomes we could create for you.
+                </p>
+            </div>
+
+            <!-- Before/After Slider -->
+            <div class="max-w-3xl mx-auto mb-12">
+                <div class="relative overflow-hidden select-none" id="comparison-slider">
+                    <!-- After Image (Background) -->
+                    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=500&fit=crop"
+                         alt="After dental treatment"
+                         class="w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover">
+
+                    <!-- Before Image (Overlay with clip) -->
+                    <div class="absolute inset-0 overflow-hidden" id="before-container" style="width: 50%;">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&h=500&fit=crop"
+                             alt="Before dental treatment"
+                             class="w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover"
+                             style="min-width: 100%; width: auto; max-width: none;">
+                    </div>
+
+                    <!-- Labels -->
+                    <span class="absolute bottom-4 left-4 text-white text-sm bg-black/50 px-3 py-1 rounded">Before</span>
+                    <span class="absolute bottom-4 right-4 text-white text-sm bg-black/50 px-3 py-1 rounded">After</span>
+
+                    <!-- Slider Handle -->
+                    <div class="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize" id="slider-handle" style="left: 50%;">
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-brand-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="absolute bottom-0 left-0 right-0 h-2 bg-gray-300">
+                        <div class="h-full bg-brand-dark" id="progress-bar" style="width: 50%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VIEW PHOTOS Button -->
+            <div class="text-center">
+                <a href="#" class="inline-block bg-brand-light text-white py-3 px-10 rounded-full text-sm tracking-widest uppercase hover:bg-brand-dark transition-colors">
+                    View Photos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Meet the Doctors -->
+    <section class="bg-white">
+        <!-- Dr. Raj Sinha - Photo Left, Text Right -->
+        <div class="grid grid-cols-1 lg:grid-cols-2">
+            <!-- Photo -->
+            <div class="h-[400px] md:h-[500px] lg:h-auto">
+                <img src="./images/dr-sinha.webp" alt="Dr. Raj Sinha" class="w-full h-full object-cover object-top">
+            </div>
+
+            <!-- Bio with Tree Background -->
+            <div class="relative bg-gray-100 p-8 md:p-12 lg:p-16 xl:p-20 flex flex-col justify-center overflow-hidden">
+                <!-- White Tree Watermark -->
+                <div class="absolute right-0 top-0 bottom-0 w-1/2 opacity-10 pointer-events-none">
+                    <img src="./images/white-tree.png" alt="" class="h-full w-full object-contain object-right">
+                </div>
+
+                <!-- Content -->
+                <div class="relative z-10">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-light mb-6 lg:mb-8">
+                        Raj Sinha, D.M.D., ICOI
+                    </h2>
+
+                    <p class="text-gray-600 font-sans text-sm md:text-base leading-relaxed mb-4 lg:mb-6">
+                        Dr. Raj Sinha graduated form Rensselaer Polytechnic Institute (RPI) and received his Bachelors in 1987. In 1991, he graduated from the University of Pennsylvania and received his Doctorate of Dental Medicine. Dr. Sinha completed his Bachelors and Dental Doctorate in 6 years instead of 8, making him the youngest doctor in his graduating class.
+                    </p>
+
+                    <p class="text-gray-600 font-sans text-sm md:text-base leading-relaxed">
+                        Dr. Sinha has participated in numerous courses and seminars to expand his dental education, including the Dawson Center for Advanced Dental Studies (for bite and TMJ disorders), Dental Implantology, Periodontology (gum disease) and Sedation dentistry. In addition, Dr. Sinha has advanced training from New York University and was a clinical instructor at NYU Dental School. He is a fellow with the International Congress of Oral Implantologists.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dr. Joanna Hrymoc-Sinha - Text Left, Photo Right -->
+        <div class="grid grid-cols-1 lg:grid-cols-2">
+            <!-- Bio with Tree Background (shows second on mobile, first on desktop) -->
+            <div class="relative bg-gray-100 p-8 md:p-12 lg:p-16 xl:p-20 flex flex-col justify-center overflow-hidden order-2 lg:order-1">
+                <!-- White Tree Watermark -->
+                <div class="absolute left-0 top-0 bottom-0 w-1/2 opacity-10 pointer-events-none">
+                    <img src="./images/white-tree.png" alt="" class="h-full w-full object-contain object-left">
+                </div>
+
+                <!-- Content -->
+                <div class="relative z-10">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-light mb-6 lg:mb-8">
+                        Joanna<br>Hrymoc-Sinha, D.M.D.
+                    </h2>
+
+                    <p class="text-gray-600 font-sans text-sm md:text-base leading-relaxed mb-4 lg:mb-6">
+                        Meet Dr. Joanna Hrymoc-Sinha. After earning her Bachelors of Science degree from Rutgers University in 2002, Dr. Hrymoc-Sinha went on to graduate from the University of Medicine and Dentistry in 2006, earning her Doctorate of Dental Medicine. She has established a reputation as a top dentist in the community, earning the title of Jersey Choice Top Dentist and being featured in Jersey Monthly Magazine.
+                    </p>
+
+                    <p class="text-gray-600 font-sans text-sm md:text-base leading-relaxed">
+                        But Dr. Hrymoc's expertise extends far beyond her private practices at Somerset & Hillsborough Smiles. As a Clinical Assistant Professor at the New York University College of Dentistry's Full Mouth Rehabilitation program, she teaches other dentists how to diagnose, treat and manage difficult cases involving conventional and implant-supported full-mouth rehabilitation. She is honored to be the first female faculty at the Full Mouth Reconstruction program at NYU.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Photo (shows first on mobile, second on desktop) -->
+            <div class="h-[400px] md:h-[500px] lg:h-auto order-1 lg:order-2">
+                <img src="./images/dr-hrymoc-sinha.webp" alt="Dr. Joanna Hrymoc-Sinha" class="w-full h-full object-cover object-top">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Google Reviews -->
+    <section class="bg-[#FDFDFD] py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <h2 class="font-haute text-4xl md:text-5xl text-brand-light mb-2">What Our</h2>
+                <h3 class="text-3xl md:text-4xl lg:text-5xl tracking-widest text-brand-light uppercase mb-4">Patients Say</h3>
+                <p class="text-gray-600 font-sans text-sm md:text-base max-w-2xl mx-auto">
+                    Don't just take our word for it. See what our patients have to say about their experience at Somerset Smiles.
+                </p>
+            </div>
+
+            <!-- Reviews Carousel -->
+            <div class="  mx-auto">
+                <div class="bg-white rounded-2xl p-6 md:p-8">
+                    <iframe
+                        name="bfiframe"
+                        src="https://reviews-widgets.dentalwebsites.com/type/carousel/320?length=10"
+                        id="bfpublish"
+                        scrolling="auto"
+                        class="w-full"
+                        style="border: 0; display: block; margin: 0 auto; overflow: hidden;"
+                        width="100%"
+                        height="420"
+                        frameborder="0"
+                        title="Somerset Smiles Patient Reviews">
+                    </iframe>
+                </div>
+            </div>
+
+       
+        </div>
+    </section>
+
+    <!-- Section: Contact Information -->
+    <section class="relative bg-brand-cream">
+        <!-- Desktop Layout: Map with overlay card -->
+        <div class="hidden lg:block relative h-[105vh]">
+            <!-- Google Map Background -->
+            <div class="absolute inset-0">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3032.5!2d-74.488!3d40.497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3c7d3e7b8b8b1%3A0x1234567890abcdef!2s650%20Easton%20Ave%2C%20Somerset%2C%20NJ%2008873!5e0!3m2!1sen!2sus!4v1702700000000!5m2!1sen!2sus"
+                    class="w-full h-full grayscale opacity-90"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <!-- Contact Card Overlay - Arch Shape at Top like Section 2 -->
+            <div class="absolute left-12 border font-sans lg:left-20 xl:left-28 bottom-0 bg-brand-cream backdrop-blur-sm shadow-2xl px-14 lg:px-16 xl:px-20 pt-16 pb-10 w-[520px] " style="border-radius: 50% 50% 0 0 / 40% 40% 0 0;">
+                <!-- Header -->
+                <h2 class="font-haute text-4xl lg:text-5xl text-center text-brand-gold mb-2">Contact</h2>
+                <h3 class="text-2xl lg:text-3xl tracking-widest text-center text-gray-400 uppercase mb-8">Information</h3>
+
+                <!-- Address -->
+                <div class="mb-6">
+                    <h4 class="text-brand-gold text-sm tracking-widest uppercase mb-3">Address</h4>
+                    <p class="text-gray-700 font-sans">650 Easton Ave</p>
+                    <p class="text-gray-700 font-sans">Somerset, NJ 08873</p>
+                </div>
+
+                <!-- Office Hours -->
+                <div class="mb-6">
+                    <h4 class="text-brand-gold text-sm tracking-widest uppercase mb-3">Office Hours</h4>
+                    <div class="space-y-1 font-sans text-gray-700 text-sm">
+                        <div class="flex justify-between"><span>Monday</span><span>9am - 6pm</span></div>
+                        <div class="flex justify-between"><span>Tuesday</span><span>9am - 6pm</span></div>
+                        <div class="flex justify-between"><span>Wednesday</span><span>Closed</span></div>
+                        <div class="flex justify-between"><span>Thursday</span><span>12pm - 8pm</span></div>
+                        <div class="flex justify-between"><span>Friday</span><span>9am - 4pm</span></div>
+                        <div class="flex justify-between"><span>Saturday</span><span>9am - 12pm</span></div>
+                        <div class="flex justify-between"><span>Sunday</span><span>By Appointment</span></div>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="mb-8">
+                    <h4 class="text-brand-gold text-sm tracking-widest uppercase mb-3">Phone</h4>
+                    <a href="tel:+17323743852" class="text-gray-700 font-sans text-lg hover:text-brand-gold transition-colors">(732) 374-3852</a>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col   gap-3">
+                    <a href="#" class="bg-brand-blue text-white text-center py-3 px-8 rounded-full text-sm tracking-widest uppercase hover:bg-brand-dark transition-colors">
+                        Contact Us
+                    </a>
+                    <a href="#" class="bg-brand-blue/80 text-white text-center py-3 px-8 rounded-full text-sm tracking-widest uppercase hover:bg-brand-dark transition-colors">
+                        Book Now
+                    </a>
+                    <a href="#" class="bg-brand-light text-white text-center py-3 px-8 rounded-full text-sm tracking-widest uppercase hover:bg-brand-dark transition-colors">
+                        Follow Us
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Layout: Stacked -->
+        <div class="lg:hidden">
+            <!-- Contact Card -->
+            <div class="bg-brand-cream px-6 py-12 text-center">
+                <!-- Header -->
+                <h2 class="font-haute text-4xl text-brand-gold mb-2">Contact</h2>
+                <h3 class="text-2xl tracking-widest text-gray-400 uppercase mb-8">Information</h3>
+
+                <!-- Address -->
+                <div class="mb-6">
+                    <h4 class="text-brand-gold text-sm tracking-widest uppercase mb-3">Address</h4>
+                    <p class="text-gray-700 font-sans">650 Easton Ave</p>
+                    <p class="text-gray-700 font-sans">Somerset, NJ 08873</p>
+                </div>
+
+                <!-- Office Hours -->
+                <div class="mb-6 max-w-xs mx-auto">
+                    <h4 class="text-brand-gold text-sm tracking-widest uppercase mb-3">Office Hours</h4>
+                    <div class="space-y-1 font-sans text-gray-700 text-sm">
+                        <div class="flex justify-between"><span>Monday</span><span>9am - 6pm</span></div>
+                        <div class="flex justify-between"><span>Tuesday</span><span>9am - 6pm</span></div>
+                        <div class="flex justify-between"><span>Wednesday</span><span>Closed</span></div>
+                        <div class="flex justify-between"><span>Thursday</span><span>12pm - 8pm</span></div>
+                        <div class="flex justify-between"><span>Friday</span><span>9am - 4pm</span></div>
+                        <div class="flex justify-between"><span>Saturday</span><span>9am - 12pm</span></div>
+                        <div class="flex justify-between"><span>Sunday</span><span>By Appointment</span></div>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="mb-8">
+                    <h4 class="text-brand-gold text-sm tracking-widest uppercase mb-3">Phone</h4>
+                    <a href="tel:+17323743852" class="text-gray-700 font-sans text-xl hover:text-brand-gold transition-colors">(732) 374-3852</a>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col gap-3 max-w-xs mx-auto">
+                    <a href="#" class="bg-brand-blue text-white text-center py-3 px-8 rounded-full text-sm tracking-widest uppercase hover:bg-brand-dark transition-colors">
+                        Contact Us
+                    </a>
+                    <a href="#" class="bg-brand-blue/80 text-white text-center py-3 px-8 rounded-full text-sm tracking-widest uppercase hover:bg-brand-dark transition-colors">
+                        Book Now
+                    </a>
+                    <a href="#" class="bg-brand-light text-white text-center py-3 px-8 rounded-full text-sm tracking-widest uppercase hover:bg-brand-dark transition-colors">
+                        Follow Us
+                    </a>
+                </div>
+
+                <!-- Disclaimer -->
+                <p class="text-xs text-gray-500 mt-8 px-4">
+                    *Individual results are not guaranteed and may vary from person to person. Images may contain models.
+                </p>
+            </div>
+
+            <!-- Map -->
+            <div class="h-[350px]">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3032.5!2d-74.488!3d40.497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3c7d3e7b8b8b1%3A0x1234567890abcdef!2s650%20Easton%20Ave%2C%20Somerset%2C%20NJ%2008873!5e0!3m2!1sen!2sus!4v1702700000000!5m2!1sen!2sus"
+                    class="w-full h-full"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-blue text-white py-8 text-center">
+        <div class="container mx-auto px-4">
+            <!-- Accessibility Link -->
+            <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors underline mb-4 inline-block">
+                Accessibility Statement
+            </a>
+
+            <!-- Practice Info -->
+            <p class="text-xs text-gray-400 font-sans mt-4 leading-relaxed">
+                Somerset Dentist &bull; Somerset Smiles Family &amp; Implant Dentistry &bull; 650 Easton Ave. &bull; Somerset, New Jersey 08873 &bull;
+                <a href="tel:+17323743852" class="hover:text-white transition-colors">(732) 374-3852</a>
+            </p>
+
+            <!-- Copyright -->
+            <p class="text-xs text-gray-500 font-sans mt-3">
+                &copy; 2025 DentalWebsites.com (Advanced Web Systems LLC), All rights reserved.
+            </p>
+        </div>
     </footer>
 
     </div> <!-- Close main-content wrapper -->
