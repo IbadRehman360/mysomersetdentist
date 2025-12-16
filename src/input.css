@@ -10,6 +10,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Meno Display';
+    src: url('../fonts/fonnts.com-Meno-Display-.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @layer base {
     body {
         @apply font-haute;

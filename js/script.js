@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Button -> White bg, gold text/border
             if (btnCall) {
-                btnCall.classList.remove('bg-brand-light', 'border-white', 'text-white');
+                btnCall.classList.remove('bg-brand-accent-dark', 'text-white');
                 btnCall.classList.add('bg-white', 'text-brand-gold', 'border-brand-gold', 'scrolled-btn');
             }
 
@@ -47,15 +47,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 headerLogo.src = logoDark;
             }
 
-            // Menu Lines -> Gold
+            // Menu Lines -> Keep White (hero has dark background)
             menuLines.forEach(line => {
-                line.classList.add('bg-brand-blue');
-                line.classList.remove('bg-white');
+                line.classList.add('bg-white');
+                line.classList.remove('bg-brand-blue');
             });
 
-            // Button -> Original style
+            // Button -> Original style (gold bg, white text)
             if (btnCall) {
-                btnCall.classList.add('bg-brand-light', 'border-white', 'text-white');
+                btnCall.classList.add('bg-brand-accent-dark', 'text-white');
                 btnCall.classList.remove('bg-white', 'text-brand-gold', 'border-brand-gold', 'scrolled-btn');
             }
         }

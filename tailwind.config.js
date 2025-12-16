@@ -6,6 +6,7 @@ module.exports = {
       fontFamily: {
         'haute': ['"Haute Couture"', 'serif'],
         'montserrat': ['Montserrat', 'sans-serif'],
+        'meno': ['"Meno Display"', 'serif'],
       },
       colors: {
         'gold-primary': '#aa8244',
