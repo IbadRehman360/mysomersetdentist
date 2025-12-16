@@ -5,15 +5,31 @@ module.exports = {
     extend: {
       fontFamily: {
         'haute': ['"Haute Couture"', 'serif'],
+        'montserrat': ['Montserrat', 'sans-serif'],
       },
       colors: {
+        'gold-primary': '#aa8244',
+        'gold-light': '#c9a962',
+        'gold-dark': '#8a6a36',
+
+        'off-white': '#f8f6f3',
+        'light-gray': '#f1f5f9',
+        'medium-gray': '#64748b',
+        'dark-slate': '#1e293b',
+
+        'cream': '#e9e1ba',
+        'warm-white': '#faf9f6',
+
         'brand-dark': '#1a1a1a',
         'brand-blue': '#1e293b',
-        'brand-cream': '#fcfbf9',
-        'brand-accent': '#d4af37',
+        'brand-cream': '#f8f6f3',
+        'brand-accent': '#aa8244',
+        'brand-accent-darker': '#8a6a36',
+        'brand-accent-dark': '#aa8244',
         'brand-light': '#c9a962',
-        'brand-white': '#fcf9f2',
+        'brand-white': '#faf9f6',
       },
+   
       spacing: {
         '13': '3.25rem',
         '15': '3.75rem',
