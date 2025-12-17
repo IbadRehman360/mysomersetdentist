@@ -148,7 +148,7 @@
     <header id="main-header"
         class="fixed top-0 w-full z-50 transition-all duration-500 ease-out px-4 py-4 md:px-8 lg:px-12 md:py-5 lg:py-6 flex justify-between items-center bg-transparent">
         <div class="logo z-50">
-            <a href="#">
+            <a href="#">    
                 <img src="./images/logo.png" alt="Maison BE"
                     class="h-16 lg:h-24 object-contain transition-all duration-500 ease-out" id="header-logo">
             </a>
@@ -156,15 +156,15 @@
 
         <div class="flex items-center gap-4 font-thin md:gap-6 z-50" id="header-actions">
             <a href="tel:+12125183815"
-                class="hidden md:flex items-center font-montserrat justify-center px-10 py-3 rounded-full bg-brand-accent-dark text-white border-2 border-transparent hover:bg-white hover:text-brand-accent-dark hover:border-brand-accent-dark hover:shadow-lg hover:scale-105 transition-all duration-300 text-sm font-semibold tracking-wide"
+                class="hidden md:flex items-center font-montserrat justify-center px-10 py-3 rounded-full bg-brand-accent-dark text-white border-2 border-transparent hover:bg-white hover:text-brand-accent-dark hover:border-brand-accent-dark b transition-all duration-300 text-sm font-semibold tracking-wide"
                 id="btn-call">
                 Call Now
             </a>
 
-            <button id="menu-btn" class="group flex flex-col justify-center gap-1.5 w-8 h-6 cursor-pointer">
-                <span class="block w-full h-[3px] bg-white rounded-full transition-colors duration-300" id="menu-line-1"></span>
-                <span class="block w-full h-[3px] bg-white rounded-full transition-colors duration-300" id="menu-line-1"></span>
-                <span class="block w-full h-[3px] bg-white rounded-full transition-colors duration-300" id="menu-line-1"></span>
+            <button id="menu-btn" class="group flex flex-col justify-center gap-[3px] w-6 h-6 lg:w-8 lg:h-8 cursor-pointer">
+                <span class="block w-full h-[3px] lg:h-1 bg-brand-blue rounded-full transition-colors duration-300" id="menu-line-1"></span>
+                <span class="block w-full h-[3px] lg:h-1 bg-brand-blue rounded-full transition-colors duration-300" id="menu-line-1"></span>
+                <span class="block w-full h-[3px] lg:h-1 bg-brand-blue rounded-full transition-colors duration-300" id="menu-line-1"></span>
             </button>
         </div>
     </header>
@@ -180,29 +180,29 @@
         <div
             class="relative z-10 mt-4 text-center px-4 w-full max-w-4xl mx-auto flex flex-col items-center">
             <h1 class="opacity-0 animate-fade-in-up" style="animation-delay: 0.2s; animation-fill-mode: forwards;">
-                <span class="font-meno text-5xl sm:text-6xl md:text-8xl lg:text-9xl leading-2 tracking-tight font-medium">
+                <span class="font-meno text-5xl sm:text-6xl md:text-8xl lg:text-9xl leading-2 tracking-tight font-semibold lg:font-medium">
                     <span class="text-brand-light">Somerset </span><span class="text-brand-blue">Smiles</span>
                 </span>
             </h1>
-            <p class="font-montserrat text-brand-blue text-lg sm:text-xl md:text-3xl lg:text-5xl font-medium tracking-tight opacity-0 animate-fade-in-up" style="animation-delay: 0.4s; animation-fill-mode: forwards;">
+            <p class="font-montserrat text-brand-blue text-lg sm:text-xl md:text-3xl lg:text-5xl font-semibold lg:font-medium tracking-tight opacity-0 animate-fade-in-up" style="animation-delay: 0.4s; animation-fill-mode: forwards;">
                 Family and Implant Dentistry
             </p>
 
             <a href="#"
-                class="mt-4 lg:mt-8 md:flex items-center font-semibold font-montserrat justify-center px-8 py-4 rounded-full bg-brand-accent-dark text-white border-2 border-transparent hover:bg-white hover:text-brand-accent-dark hover:border-brand-accent-dark hover:shadow-xl hover:scale-105 transition-all duration-300 text-sm tracking-wide opacity-0 animate-fade-in-up"
+                class="mt-4 lg:mt-8 md:flex items-center font-semibold font-montserrat justify-center px-6 lg:px-8 py-3 lg:py-4 rounded-full bg-brand-accent-dark text-white border-2 border-transparent hover:bg-white hover:text-brand-accent-dark hover:border-brand-accent-dark hover:scale-105 transition-all duration-300 text-sm tracking-wide opacity-0 animate-fade-in-up"
                 style="animation-delay: 0.6s; animation-fill-mode: forwards;">Schedule Appointment
             </a>
         </div>
 
-        <div class="absolute bottom-24 left-1/2 transform -translate-x-1/2 text-white/50 animate-bounce">
-            <svg class="w-8 h-8 font-thin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <a href="#welcome-section" class="absolute bottom-[14vh] left-1/2 transform -translate-x-1/2 text-brand-blue animate-bounce cursor-pointer hover:text-brand-light transition-colors duration-300">
+            <svg class="w-8 h-8 font-bold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3">
                 </path>
             </svg>
-        </div>
+        </a>
     </section>
 
-    <section class="relative overflow-hidden bg-transparent min-h-fit md:min-h-[700px] lg:min-h-[960px] -mt-[35px]">
+    <section id="welcome-section" class="relative overflow-hidden bg-transparent min-h-fit md:min-h-[700px] lg:min-h-[960px] -mt-[35px]">
         <div class="absolute z-0 top-0 bottom-0 left-4 right-4 md:left-8 lg:left-10 md:right-8 lg:right-10 bg-section-mobile md:bg-section-fixed">
         </div>
 
@@ -232,7 +232,7 @@
                 <p class="text-3xl md:text-5xl font-light mb-2">Provide Excellent</p>
                 <p class="text-3xl md:text-5xl font-light mb-8 md:mb-12">Dental Care!</p>
 
-                <div class="flex flex-wrap justify-center gap-3 md:gap-4 mb-16">
+                <div class="flex flex-wrap justify-center gap-3 md:gap-4 mb-16 px-10 pb-10">
                     <img
                         src="./images/badges-images/jersey-choice-dentist-logo-2024.webp"
                         alt="Jersey Choice Dentist Award 2024"
@@ -462,7 +462,7 @@
             </div>
         </div>
         <div class="text-center py-12">
-            <a href="#" class="inline-block font-montserrat font-bold bg-brand-light text-white py-4 px-8    lg:px-10 rounded-full text-base tracking-widest uppercase hover:bg-brand-dark transition-colors">
+            <a href="#" class="inline-block font-montserrat font-bold bg-brand-blue text-white py-4 px-8    lg:px-10 rounded-full text-base tracking-widest uppercase hover:bg-brand-dark transition-colors">
                 All Services    
             </a>
         </div>
@@ -556,25 +556,25 @@
         </div>
     </section>
 
-    <div class="bg-white px-4 md:px-6 lg:px-10">
+    <div class="bg-white px-2 md:px-6 lg:px-10">
 
     <section class="relative mb-16 md:mb-20 lg:mb-28 py-12 md:py-16 lg:py-24" style="background: url('./images/gallery-bg.png') center/cover no-repeat;">
-        <div class="container mx-auto px-4 md:px-6">
+        <div class="container mx-auto px-2 md:px-6">
             <div class="text-center mb-8 md:mb-10 lg:mb-14">
                 <h2 class="font-haute text-3xl md:text-4xl lg:text-5xl text-brand-dark mb-1">Real</h2>
                 <h3 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-brand-accent-dark font-montserrat mt-4 md:mt-6 uppercase font-bold">SMILES</h3>
             </div>
 
-            <div class="max-w-xl md:max-w-2xl mx-auto mb-8 md:mb-12 font-montserrat">
-                <div class="relative overflow-hidden select-none shadow-lg" id="comparison-slider">
+            <div class="w-full  sm:px-0 sm:max-w-md md:max-w-2xl mx-auto mb-8 md:mb-12 font-montserrat">
+                <div class="relative overflow-hidden select-none shadow-lg rounded-lg" id="comparison-slider">
                     <img src="./images/case-after1.webp"
                          alt="After dental treatment"
-                         class="w-full h-[250px] sm:h-[280px] md:h-[350px] lg:h-[400px] object-cover">
+                         class="w-full h-[200px] sm:h-[200px] md:h-[350px] lg:h-[400px] object-cover">
 
                     <div class="absolute inset-0 overflow-hidden" id="before-container" style="width: 50%;">
                         <img src="./images/case-before1.webp"
                              alt="Before dental treatment"
-                             class="w-full h-[250px] sm:h-[280px] md:h-[350px] lg:h-[400px] object-cover"
+                             class="h-[200px] sm:h-[200px] md:h-[350px] lg:h-[400px] object-cover"
                              style="min-width: 100%; width: auto; max-width: none;">
                     </div>
 
@@ -593,7 +593,7 @@
             </div>
 
             <div class="text-center font-montserrat">
-                <h4 class="text-lg sm:text-xl md:text-2xl lg:text-5xl tracking-tighter text-brand-accent-dark font-extrabold uppercase">
+                <h4 class="text-2xl md:text-2xl lg:text-5xl tracking-tighter text-brand-accent-dark font-extrabold uppercase">
                     Compassionate Care. Beautiful Results.
                 </h4>
             </div>

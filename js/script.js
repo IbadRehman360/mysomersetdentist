@@ -23,8 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             menuLines.forEach(line => {
-                line.classList.remove('bg-brand-blue');
-                line.classList.add('bg-white');
+                 line.classList.add('bg-white');
             });
 
             if (btnCall) {
@@ -40,8 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             menuLines.forEach(line => {
-                line.classList.add('bg-white');
-                line.classList.remove('bg-brand-blue');
+                line.classList.add('bg-brand-blue');
+                                line.classList.remove('bg-white');
+
             });
 
             if (btnCall) {
