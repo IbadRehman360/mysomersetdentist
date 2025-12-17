@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeSidebarBtn = document.getElementById('close-sidebar');
     const menuLines = document.querySelectorAll('#menu-btn span');
     const btnCall = document.getElementById('btn-call');
+    const btnCallMobile = document.getElementById('btn-call-mobile');
+    const btnLocation = document.getElementById('btn-location');
 
     const logoWhite = './images/logo-white.png';
     const logoDark = './images/logo.png';
@@ -15,38 +17,83 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateHeader() {
         if (window.scrollY > 50) {
-            header.classList.remove('bg-transparent', 'py-4', 'md:py-6');
-            header.classList.add('bg-brand-blue', 'shadow-md', 'py-2', 'md:py-3');
+            // Scrolled state - shrink header
+            header.classList.remove('bg-transparent', 'py-4', 'md:py-5', 'lg:py-6');
+            header.classList.add('bg-brand-blue', 'shadow-md', 'py-2', 'md:py-3', 'lg:py-3');
+
+            // Shrink logo
+            headerLogo.classList.remove('h-16', 'md:h-20', 'lg:h-24');
+            headerLogo.classList.add('h-12', 'md:h-14', 'lg:h-16');
 
             if (headerLogo.src.indexOf('logo-white') === -1) {
                 headerLogo.src = logoWhite;
             }
 
+            // Shrink menu button
+            menuBtn.classList.remove('w-7', 'h-7', 'gap-1.5');
+            menuBtn.classList.add('w-6', 'h-6', 'lg:w-7', 'lg:h-7', 'gap-1');
+
             menuLines.forEach(line => {
-                 line.classList.add('bg-white');
+                line.classList.add('bg-white');
+                line.classList.remove('bg-brand-blue', 'h-[3px]');
+                line.classList.add('h-[2px]', 'lg:h-[2.5px]');
             });
 
+            // Shrink call button
             if (btnCall) {
-                btnCall.classList.remove('bg-brand-accent-dark', 'text-white');
-                btnCall.classList.add('bg-white', 'text-brand-gold', 'border-brand-gold', 'scrolled-btn');
+                btnCall.classList.remove('bg-brand-accent-dark', 'text-white', 'px-8', 'py-2.5');
+                btnCall.classList.add('bg-white', 'text-brand-gold', 'border-brand-gold', 'scrolled-btn', 'px-7', 'py-2.5', 'text-sm');
+            }
+
+            // Update location button colors (keep size fixed)
+            if (btnLocation) {
+                btnLocation.classList.remove('bg-brand-accent-dark', 'text-white');
+                btnLocation.classList.add('bg-white', 'text-brand-accent-dark', 'border-brand-accent-dark');
+            }
+
+            // Update mobile call button colors (keep size fixed)
+            if (btnCallMobile) {
+                btnCallMobile.classList.remove('bg-brand-accent-dark', 'text-white');
+                btnCallMobile.classList.add('bg-white', 'text-brand-accent-dark', 'border-brand-accent-dark');
             }
         } else {
-            header.classList.add('bg-transparent', 'py-4', 'md:py-6');
-            header.classList.remove('bg-brand-blue', 'shadow-md', 'py-2', 'md:py-3');
+            // Default state - full size header
+            header.classList.add('bg-transparent', 'py-4', 'md:py-5', 'lg:py-6');
+            header.classList.remove('bg-brand-blue', 'shadow-md', 'py-2', 'md:py-3', 'lg:py-3');
+
+            // Full size logo
+            headerLogo.classList.add('h-16', 'md:h-20', 'lg:h-24');
+            headerLogo.classList.remove('h-12', 'md:h-14', 'lg:h-16');
 
             if (headerLogo.src.indexOf('logo.png') === -1) {
                 headerLogo.src = logoDark;
             }
 
-            menuLines.forEach(line => {
-                line.classList.add('bg-brand-blue');
-                                line.classList.remove('bg-white');
+            // Full size menu button
+            menuBtn.classList.add('w-7', 'h-7', 'gap-1.5');
+            menuBtn.classList.remove('w-6', 'h-6', 'lg:w-7', 'lg:h-7', 'gap-1');
 
+            menuLines.forEach(line => {
+                line.classList.add('bg-brand-blue', 'h-[3px]');
+                line.classList.remove('bg-white', 'h-[2px]', 'lg:h-[2.5px]');
             });
 
+            // Full size call button
             if (btnCall) {
-                btnCall.classList.add('bg-brand-accent-dark', 'text-white');
-                btnCall.classList.remove('bg-white', 'text-brand-gold', 'border-brand-gold', 'scrolled-btn');
+                btnCall.classList.add('bg-brand-accent-dark', 'text-white', 'px-8', 'py-2.5');
+                btnCall.classList.remove('bg-white', 'text-brand-gold', 'border-brand-gold', 'scrolled-btn', 'px-7', 'text-sm');
+            }
+
+            // Reset location button colors
+            if (btnLocation) {
+                btnLocation.classList.add('bg-brand-accent-dark', 'text-white');
+                btnLocation.classList.remove('bg-white', 'text-brand-accent-dark', 'border-brand-accent-dark');
+            }
+
+            // Reset mobile call button colors
+            if (btnCallMobile) {
+                btnCallMobile.classList.add('bg-brand-accent-dark', 'text-white');
+                btnCallMobile.classList.remove('bg-white', 'text-brand-accent-dark', 'border-brand-accent-dark');
             }
         }
         ticking = false;
@@ -83,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.classList.remove('opacity-100');
         overlay.classList.add('opacity-0');
         if (mainContent) {
-            mainContent.style.transform = 'translateX(0)';
+            mainContent.style.transform = '';
         }
         setTimeout(() => {
             overlay.classList.add('hidden');

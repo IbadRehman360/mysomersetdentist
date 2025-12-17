@@ -4,7 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maison BE Dental Studio</title>
+    <title>Somerset Smiles | Family and Implant Dentistry</title>
+    <meta name="description" content="Somerset Smiles offers compassionate family and implant dentistry services. Experience beautiful results with our expert dental care team.">
+    <meta name="keywords" content="dentist, dental implants, family dentistry, cosmetic dentistry, Somerset, dental care">
+    <meta name="author" content="Somerset Smiles">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Somerset Smiles | Family and Implant Dentistry">
+    <meta property="og:description" content="Compassionate dental care with beautiful results. Family and implant dentistry services.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./images/logo.png">
+    <link rel="icon" type="image/png" href="./images/logo.png">
+    <link rel="apple-touch-icon" href="./images/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -149,22 +159,51 @@
         class="fixed top-0 w-full z-50 transition-all duration-500 ease-out px-4 py-4 md:px-8 lg:px-12 md:py-5 lg:py-6 flex justify-between items-center bg-transparent">
         <div class="logo z-50">
             <a href="#">    
-                <img src="./images/logo.png" alt="Maison BE"
-                    class="h-16 lg:h-24 object-contain transition-all duration-500 ease-out" id="header-logo">
+                <img src="./images/logo.png" alt="Somerset Smiles"
+                    class="h-16 md:h-20 lg:h-24 object-contain transition-all duration-500 ease-out" id="header-logo">
             </a>
         </div>
 
-        <div class="flex items-center gap-4 font-thin md:gap-6 z-50" id="header-actions">
+        <div class="flex items-center gap-3 font-thin md:gap-4 z-50" id="header-actions">
+            <!-- Location Button with Tooltip -->
+            <div class="relative group">
+                <a href="https://maps.google.com/?q=6700+W+121st+St+Suite+104+Overland+Park+KS+66209" target="_blank"
+                    class="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-brand-accent-dark text-white border-2 border-transparent hover:bg-white hover:text-brand-accent-dark hover:border-brand-accent-dark hover:shadow-lg hover:scale-110 transition-all duration-500"
+                    id="btn-location">
+                    <svg class="w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                </a>
+                <!-- Location Tooltip -->
+                <div class="absolute right-0 top-full mt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                    <div class="bg-brand-blue text-white text-xs font-montserrat px-4 py-3 rounded-lg shadow-xl whitespace-nowrap border border-white">
+                        <p class="font-semibold">6700 W. 121st St. Suite 104</p>
+                        <p>Overland Park, KS 66209</p>
+                    </div>
+                    <div class="absolute -top-1 right-4 w-2 h-2 bg-brand-blue transform rotate-45 border-l-2 border-t-2 border-white"></div>
+                </div>
+            </div>
+
+            <!-- Call Icon Button (Mobile) -->
             <a href="tel:+12125183815"
-                class="hidden md:flex items-center font-montserrat justify-center px-10 py-3 rounded-full bg-brand-accent-dark text-white border-2 border-transparent hover:bg-white hover:text-brand-accent-dark hover:border-brand-accent-dark b transition-all duration-300 text-sm font-semibold tracking-wide"
+                class="flex md:hidden items-center justify-center w-8 h-8 rounded-full bg-brand-accent-dark text-white border-2 border-transparent hover:bg-white hover:text-brand-accent-dark hover:border-brand-accent-dark hover:shadow-lg hover:scale-110 transition-all duration-500"
+                id="btn-call-mobile">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                </svg>
+            </a>
+
+            <!-- Call Now Button (Desktop) -->
+            <a href="tel:+12125183815"
+                class="hidden md:flex items-center font-montserrat justify-center px-8 py-2.5 rounded-full bg-brand-accent-dark text-white border-2 border-transparent hover:bg-white hover:text-brand-accent-dark hover:border-brand-accent-dark hover:shadow-lg hover:scale-105 transition-all duration-500 text-sm font-semibold tracking-wide"
                 id="btn-call">
                 Call Now
             </a>
 
-            <button id="menu-btn" class="group flex flex-col justify-center gap-[3px] w-6 h-6 lg:w-8 lg:h-8 cursor-pointer">
-                <span class="block w-full h-[3px] lg:h-1 bg-brand-blue rounded-full transition-colors duration-300" id="menu-line-1"></span>
-                <span class="block w-full h-[3px] lg:h-1 bg-brand-blue rounded-full transition-colors duration-300" id="menu-line-1"></span>
-                <span class="block w-full h-[3px] lg:h-1 bg-brand-blue rounded-full transition-colors duration-300" id="menu-line-1"></span>
+            <button id="menu-btn" class="group flex flex-col justify-center gap-1.5 w-7 h-7 cursor-pointer transition-all duration-500">
+                <span class="block w-full h-[3px] bg-brand-blue rounded-full transition-all duration-500" id="menu-line-1"></span>
+                <span class="block w-full h-[3px] bg-brand-blue rounded-full transition-all duration-500" id="menu-line-2"></span>
+                <span class="block w-full h-[3px] bg-brand-blue rounded-full transition-all duration-500" id="menu-line-3"></span>
             </button>
         </div>
     </header>
@@ -184,7 +223,7 @@
                     <span class="text-brand-light">Somerset </span><span class="text-brand-blue">Smiles</span>
                 </span>
             </h1>
-            <p class="font-montserrat text-brand-blue text-lg sm:text-xl md:text-3xl lg:text-5xl font-semibold lg:font-medium tracking-tight opacity-0 animate-fade-in-up" style="animation-delay: 0.4s; animation-fill-mode: forwards;">
+            <p class="font-montserrat text-brand-blue text-lg sm:text-xl md:text-3xl lg:text-5xl font-semibold lg:font-semibold tracking-tighter opacity-0 animate-fade-in-up" style="animation-delay: 0.4s; animation-fill-mode: forwards;">
                 Family and Implant Dentistry
             </p>
 
@@ -211,11 +250,11 @@
             <div class="min-[1440px]:hidden text-center text-white">
                 <p class="text-2xl md:text-3xl font-normal mb-2">Welcome To</p>
 
-                <h2 class="font-montserrat text-brand-accent text-3xl md:text-4xl font-extrabold tracking-wide mb-6 md:mb-8 uppercase">
+                <h2 class="font-montserrat text-brand-accent text-3xl md:text-6xl font-extrabold tracking-wide mb-6 md:mb-8 uppercase">
                     Somerset Smiles
                 </h2>
 
-                <p class="text-sm md:text-base leading-relaxed font-montserrat mb-4 md:mb-6 px-4 md:px-12 lg:px-4 font-bolder">
+                <p class="text-sm md:text-base leading-relaxed font-meno mb-4 md:mb-6 px-4 md:px-12 lg:px-4 font-bolder">
                     Your smile is one of the first things people notice. If you want a beautiful healthy smile and exceptional dental health, visit the practice of Dr. Raj Sinha, D.M.D, D.D.S & Joanna Hryrnoc-Sinha, D.M.D. Dr. Raj Sinha & Dr. Joanna Hryrnoc-Sinha, along with their caring team, strive to provide patients with the highest quality, most comfortable dental care in a relaxing, state-of-the-art environment.
                 </p>
 
@@ -272,7 +311,7 @@
                     <div class="bg-white backdrop-blur-sm p-8 md:p-10 lg:p-16 pb-8 md:pb-10 lg:pb-12 max-w-md md:max-w-lg lg:max-w-2xl text-center shadow-2xl flex flex-col justify-start mb-0 h-full " style="border-radius: 50% 50% 0 0 / 50% 50% 0 0;">
                         <p class="text-gray-700 tracking-widest text-2xl md:text-3xl lg:text-4xl font-semibold mb-2 mt-8 md:mt-12 lg:mt-28">Welcome To</p>
 
-                        <h2 class="font-mono text-brand-light text-3xl md:text-4xl  lg:text-5xl mt-1 font-semibold  tracking-wide mb-4 md:mb-6 lg:mb-8">
+                        <h2 class="font-meno text-brand-light text-3xl md:text-4xl  lg:text-6xl mt-1 font-semibold mb-4 md:mb-6 lg:mb-8">
                             Somerset Smiles
                         </h2>
 
@@ -482,7 +521,7 @@
                 </div>
 
                 <div class="relative z-10 max-w-lg">
-                    <h2 class="text-2xl sm:text-3xl md:text-3xl font-montserrat lg:text-5xl font-bold text-brand-light mb-4 md:mb-6 lg:mb-8">
+                    <h2 class="text-2xl tracking-tight sm:text-3xl md:text-3xl font-meno lg:text-5xl font-bold text-brand-light mb-4 md:mb-6 lg:mb-8">
                         Raj Sinha, D.M.D., ICOI
                     </h2>
 
@@ -505,7 +544,7 @@
                 </div>
 
                 <div class="relative z-10 max-w-lg md:ml-auto">
-                    <h2 class="text-2xl sm:text-3xl md:text-3xl lg:text-5xl font-montserrat font-bold text-brand-light mb-4 md:mb-6 lg:mb-8">
+                    <h2 class="text-2xl tracking-tight sm:text-3xl md:text-3xl font-meno lg:text-5xl font-bold text-brand-light mb-4 md:mb-6 lg:mb-8">
                         Joanna<br>Hrymoc-Sinha, D.M.D.
                     </h2>
 
@@ -525,11 +564,11 @@
         </div>
     </section>
 
-    <section class="bg-[#FDFDFD] py-12 md:py-16 lg:py-24">
+    <section class="bg-[#FDFDFD] py-12 md:py-16 lg:py-36">
         <div class="container mx-auto px-4 md:px-6">
             <div class="text-center animate-on-scroll">
-                <h2 class="font-haute text-3xl md:text-4xl lg:text-5xl text-brand-light mb-2">What Our</h2>
-                <h3 class="text-2xl sm:text-3xl md:text-4xl font-montserrat lg:text-6xl font-extrabold text-brand- uppercase mb-4">Patients Say</h3>
+                <h2 class="font-haute text-3xl md:text-4xl lg:text-5xl mb-2">What Our</h2>
+                <h3 class="text-2xl sm:text-3xl md:text-4xl font-meno lg:text-6xl font-extrabold text-brand-accent-dark uppercase mt-6 mb-4">Patients Say</h3>
                 <p class="text-gray-600 font-montserrat text-sm font-semibold md:text-base max-w-xl md:max-w-2xl mx-auto">
                     Don't just take our word for it. See what our patients have to say about their experience at Somerset Smiles.
                 </p>
@@ -562,7 +601,7 @@
         <div class="container mx-auto px-2 md:px-6">
             <div class="text-center mb-8 md:mb-10 lg:mb-14">
                 <h2 class="font-haute text-3xl md:text-4xl lg:text-5xl text-brand-dark mb-1">Real</h2>
-                <h3 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-brand-accent-dark font-montserrat mt-4 md:mt-6 uppercase font-bold">SMILES</h3>
+                <h3 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-brand-accent-dark font-meno tracking-wider mt-4 md:mt-6 uppercase font-bold">SMILES</h3>
             </div>
 
             <div class="w-full  sm:px-0 sm:max-w-md md:max-w-2xl mx-auto mb-8 md:mb-12 font-montserrat">
