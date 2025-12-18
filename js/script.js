@@ -274,4 +274,101 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Video Banner Modal Functionality
+    const videoModal = document.getElementById('video-modal');
+    const closeVideoBtn = document.getElementById('close-video');
+    const videoContainer = document.getElementById('video-container');
+    const videoTriggers = document.querySelectorAll('.video-trigger');
+
+    let isModalOpening = false;
+
+    function openVideoModal(videoUrl) {
+        // Prevent multiple rapid clicks
+        if (isModalOpening || !videoModal.classList.contains('hidden')) {
+            return;
+        }
+
+        isModalOpening = true;
+
+        // Close sidebar if open
+        const sidebarMenu = document.getElementById('sidebar-menu');
+        if (sidebarMenu && !sidebarMenu.classList.contains('translate-x-full')) {
+            closeSidebar();
+        }
+
+        // Create iframe for Vimeo
+        const iframe = document.createElement('iframe');
+        iframe.setAttribute('width', '100%');
+        iframe.setAttribute('height', '100%');
+        iframe.setAttribute('src', videoUrl);
+        iframe.setAttribute('title', 'Somerset Smiles Patient Testimonial');
+        iframe.setAttribute('frameborder', '0');
+        iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.className = 'w-full h-full rounded-lg';
+
+        // Clear and append iframe
+        videoContainer.innerHTML = '';
+        videoContainer.appendChild(iframe);
+
+        // Show modal with animation
+        videoModal.classList.remove('hidden');
+        videoModal.classList.add('active');
+        document.body.classList.add('overflow-hidden');
+
+        // Trigger animation
+        setTimeout(() => {
+            videoModal.classList.remove('opacity-0');
+            videoModal.classList.add('opacity-100');
+            isModalOpening = false;
+        }, 10);
+    }
+
+    function closeVideoModal() {
+        // Fade out
+        videoModal.classList.remove('opacity-100');
+        videoModal.classList.add('opacity-0');
+
+        // Remove iframe and hide modal after animation
+        setTimeout(() => {
+            videoContainer.innerHTML = '';
+            videoModal.classList.add('hidden');
+            videoModal.classList.remove('active');
+            document.body.classList.remove('overflow-hidden');
+        }, 500);
+    }
+
+    // Event Listeners for video triggers
+    videoTriggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            const videoUrl = trigger.getAttribute('data-video-url');
+            if (videoUrl) {
+                openVideoModal(videoUrl);
+            }
+        });
+    });
+
+    if (closeVideoBtn) {
+        closeVideoBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeVideoModal();
+        });
+    }
+
+    if (videoModal) {
+        // Close on overlay click (not on video container)
+        videoModal.addEventListener('click', (e) => {
+            if (e.target === videoModal || e.target.classList.contains('flex')) {
+                closeVideoModal();
+            }
+        });
+
+        // Close on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !videoModal.classList.contains('hidden')) {
+                closeVideoModal();
+            }
+        });
+    }
 });
